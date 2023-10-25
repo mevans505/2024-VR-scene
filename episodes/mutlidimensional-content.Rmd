@@ -70,7 +70,6 @@ by Artificial Intelligence software).
 ![](fig/AdobeStock_552189310.jpeg){alt="photographs"}
 ![Top) Digital photographs &copy; Leonid Tit from AdobeStock, bottom) Computer generated image &copy; irissca from AdobeStock](fig/AdobeStock_635196929.jpeg){alt="generated"}
 
-
 Given the wide-availability of camera sensors, including
 on smart phones and digital cameras,
 digital images are the widest available multi-dimensional media.
@@ -97,16 +96,31 @@ https://www.europeana.eu/item/794/ark__12148_bpt6k9798997w](fig/Europeana.eu-794
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+Finally, images are commonly stored using formats such such as:
+- *JPEG*, short for Joint Photographic Experts Group, and *PNG*
+*Portable Network Graphics* formats compress
+pixel information making the files size smaller.
+- *TIFF*, short for Tag Image File Format, 
+stores non-compressed information, making the file sizes larger.
+
+Digital photography will make use
+of other formats, such as *DNG* or *RAW* to store raw image information. 
+Other software store image projects in proprietary formats, meaning files
+can only be open by these.
+
 
 
 ## Digital Video
 
-Digital video could be considered a **3-dimensional** media.
-This is because an image or **frame**, which is stored
-in **2-dimensions** as seen above, is rendered one
-after another.
+Digital video could be considered a **2-dimensional** or, even a **3-dimensional**,
+type of media.
 
-![](fig/figure of many frames){alt="frames in video"}
+This is because a video contains many images or **frames**, which are stored
+in **2-dimensions** as described above, and rendered sequentially.
+
+![Frames on a video film &copy; ismailbasdas from Adobe Stock](fig/AdobeStock_598901894.png){alt="frames in video"}
+![Jump sequence motion in 8 frames &copy; Vector Tradition from Adobe Stock](fig/AdobeStock_603342595.jpeg){alt="frames in video frog"}
+
 
 Video also have a **Resolution** which is related to the images.
 Resolution will be the same for all the frames in a video file.
@@ -117,18 +131,31 @@ The rate at which frames are displayed is usually referred
 to as **Frames Per Second** or **FPS**. For reference,
 TV and movies are usually displayed at 24 FPS.
 
-The higher the resolution and the FPS the more data 
-a video file will contain. This will make it much larger
-and challenging to send via email or download over the web.
+Video is also a popular type of content, as there are many platforms
+on the web which allow
+users to easily share their media. See examples:
 
-Video is also a popular type of content
-over the web, as there are many platforms which allow
-users to easily share their media, e.g. [YouTube](https://www.youtube.com), 
-[Vimeo](https://vimeo.com/),
-[TikTok](https://tiktok.com). Note that while images
-can be downloaded by web browsers, it is often more difficult to 
-download video from these websites and it is only made available
+- [YouTube](https://www.youtube.com), 
+- [Vimeo](https://vimeo.com/),
+
+
+Note that while images can be downloaded by web browsers, 
+it is not always possible to download video 
+from these websites. Many times, video is only made available
 through a media player.
+
+There are many formats to store video and audio, including
+those supported by webpages:
+
+- MP4 (MPEG-4) is a common *container format* which can play
+in almost all devices and over the web.
+- WebM and OGG are open video formats.
+
+There are many others [formats](https://en.wikipedia.org/wiki/Video_file_format).
+Note that videos with higher resolution and FPS will 
+be larger and hence, challenging 
+to send via email or download over the web. 
+
 
 ## 3D Images or Models
 Before exploring the storage of 3D models, there is an important distinction
