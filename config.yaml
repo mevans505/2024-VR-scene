@@ -58,21 +58,21 @@ contact: 'K.Rodriguez@brighton.ac.uk'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
+episodes:
 - introduction.Rmd
 - mutlidimensional-content.Rmd
 - making-it-fair.Rmd
-- retrieving-and-curating-multidimensional-data.Rmd
 - virtual-research-environment.Rmd
+- retrieving-and-curating-multidimensional-data.Rmd
 
 # Information for Learners
-learners: 
+learners:
 
 # Information for Instructors
-instructors: 
+instructors:
 
 # Learner Profiles
-profiles: 
+profiles:
 
 # Customisation ---------------------------------------------
 #
