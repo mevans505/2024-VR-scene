@@ -135,8 +135,9 @@ Video is also a popular type of content, as there are many platforms
 on the web which allow
 users to easily share their media. See examples:
 
-- [YouTube](https://www.youtube.com), 
-- [Vimeo](https://vimeo.com/),
+- [YouTube](https://www.youtube.com)
+- [Vimeo](https://vimeo.com/)
+- [Wikimedia](https://commons.wikimedia.org/wiki/Category:Videos)
 
 
 Note that while images can be downloaded by web browsers, 
@@ -156,11 +157,9 @@ Note that videos with higher resolution and FPS will
 be larger and hence, challenging 
 to send via email or download over the web. 
 
-
 ## 3D Images or Models
-Before exploring the storage of 3D models, there is an important distinction
-to be made.
-
+Before exploring what 3D images or 3D models are, 
+there are some relevant concepts to cover.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
@@ -204,22 +203,150 @@ information of the 3D-cube you drawn.
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-Spatial data is stored using 
-**3-dimensions** 
+**Rasterisation** is the process 
+to go from a **vector** graphics description 
+into a **raster** image. In this process, we understand:
 
-or **4-dimensions** if 
+- The **vector** description allows a user to
+draw primitives such
+as 2D polygons, line segments and 3D shapes using 
+coordinates (e.g. (1,0)) or mathematical functions.
+
+![](fig/square.svg){alt='square vector format'}
+In the example above, a user can describe a 
+cube using 4 coordinates: (0,0), (1,0), (1,1) and (0,1).
+
+- The **raster image** is the pixel-based representation of the
+vector description.
+
+![](fig/square_raster.svg){alt='square raster format' width=70%}
 
 
+Now that we covered these concepts, we return to the definition of
+**3-dimensional** media. A **3-dimensional** image or model
+normally refers to a file(s) with vector data which describes 
+spatial information.
+For example, 
 
-Spatial data
+- Points in space acquired by a sensor device such
+as a 3D scanner, or 
+- An architectural 3D drawing with measurements for walls and other
+architectural elements.
 
-3D models are vector data, which 
-are points connected in a 3-dimensional spaces.
+```stl
+solid cube-ascii
+    facet normal  0.000000e+00  0.000000e+00  1.000000e+00
+        outer loop
+            vertex  0.000000e+00  0.000000e+00  1.000000e+01
+            vertex  1.000000e+01  0.000000e+00  1.000000e+01
+            vertex  0.000000e+00  1.000000e+01  1.000000e+01
+        endloop
+    endfacet
+    facet normal  0.000000e+00  0.000000e+00  1.000000e+00
+        outer loop
+            vertex  1.000000e+01  1.000000e+01  1.000000e+01
+            vertex  0.000000e+00  1.000000e+01  1.000000e+01
+            vertex  1.000000e+01  0.000000e+00  1.000000e+01
+        endloop
+    endfacet
+    facet normal  1.000000e+00  0.000000e+00  0.000000e+00
+        outer loop
+            vertex  1.000000e+01  0.000000e+00  1.000000e+01
+            vertex  1.000000e+01  0.000000e+00  0.000000e+00
+            vertex  1.000000e+01  1.000000e+01  1.000000e+01
+        endloop
+    endfacet
+    facet normal  1.000000e+00  0.000000e+00  0.000000e+00
+        outer loop
+            vertex  1.000000e+01  1.000000e+01  0.000000e+00
+            vertex  1.000000e+01  1.000000e+01  1.000000e+01
+            vertex  1.000000e+01  0.000000e+00  0.000000e+00
+        endloop
+    endfacet
+    facet normal  0.000000e+00  0.000000e+00 -1.000000e+00
+        outer loop
+            vertex  1.000000e+01  0.000000e+00  0.000000e+00
+            vertex  0.000000e+00  0.000000e+00  0.000000e+00
+            vertex  1.000000e+01  1.000000e+01  0.000000e+00
+        endloop
+    endfacet
+    facet normal  0.000000e+00  0.000000e+00 -1.000000e+00
+        outer loop
+            vertex  0.000000e+00  1.000000e+01  0.000000e+00
+            vertex  1.000000e+01  1.000000e+01  0.000000e+00
+            vertex  0.000000e+00  0.000000e+00  0.000000e+00
+        endloop
+    endfacet
+    facet normal -1.000000e+00  0.000000e+00  0.000000e+00
+        outer loop
+            vertex  0.000000e+00  0.000000e+00  0.000000e+00
+            vertex  0.000000e+00  0.000000e+00  1.000000e+01
+            vertex  0.000000e+00  1.000000e+01  0.000000e+00
+        endloop
+    endfacet
+    facet normal -1.000000e+00  0.000000e+00  0.000000e+00
+        outer loop
+            vertex  0.000000e+00  1.000000e+01  1.000000e+01
+            vertex  0.000000e+00  1.000000e+01  0.000000e+00
+            vertex  0.000000e+00  0.000000e+00  1.000000e+01
+        endloop
+    endfacet
+    facet normal  0.000000e+00  1.000000e+00  0.000000e+00
+        outer loop
+            vertex  0.000000e+00  1.000000e+01  1.000000e+01
+            vertex  1.000000e+01  1.000000e+01  1.000000e+01
+            vertex  0.000000e+00  1.000000e+01  0.000000e+00
+        endloop
+    endfacet
+    facet normal  0.000000e+00  1.000000e+00  0.000000e+00
+        outer loop
+            vertex  1.000000e+01  1.000000e+01  0.000000e+00
+            vertex  0.000000e+00  1.000000e+01  0.000000e+00
+            vertex  1.000000e+01  1.000000e+01  1.000000e+01
+        endloop
+    endfacet
+    facet normal  0.000000e+00 -1.000000e+00  0.000000e+00
+        outer loop
+            vertex  1.000000e+01  0.000000e+00  1.000000e+01
+            vertex  0.000000e+00  0.000000e+00  1.000000e+01
+            vertex  1.000000e+01  0.000000e+00  0.000000e+00
+        endloop
+    endfacet
+    facet normal  0.000000e+00 -1.000000e+00  0.000000e+00
+        outer loop
+            vertex  0.000000e+00  0.000000e+00  0.000000e+00
+            vertex  1.000000e+01  0.000000e+00  0.000000e+00
+            vertex  0.000000e+00  0.000000e+00  1.000000e+01
+        endloop
+    endfacet
+endsolid
+```
 
-Its composing units, are:
+This type of dataset can also extend into **4-dimensions** by
+also considering time. For instance, data captured
+by a motion capture device will produce a vector data which changes
+every time the device samples new data. We call this measure
+sampling rate per second.
 
-- Points or vertices
-- Triangles which connect these points or vertices.
+![Motion Capture 3D Render of character walking &copy; vrx123 from AdobeStock](fig/AdobeStock_236224485.jpeg){alt="motion capture"}
+
+
+The **vector** description allows a user to
+draw primitives such
+as 2D polygons, line segments and 3D shapes using 
+coordinates (e.g. (1,0)) or mathematical functions.
+
+
+**3D image** or model files contain **vector** information,
+including:
+
+- Points or vertices with coordinate information
+- Information on how various points are connected to form
+shapes such as triangles, which is known as the topology
+or connectivity of the 3D model.
+
+![3D model showing high, medium and low resolution &copy; vrx123 from AdobeStock](fig/AdobeStock_405814510.jpeg){alt="3D vector data"}
+
 
 The number of points/vertices or triangles will
 determine the resolution of the 3D model. 
@@ -229,7 +356,6 @@ longer it will take the computer to download/draw this
 Web platforms examples:
 
 Another important ter is the term *raster*. 
-
 
 
 
