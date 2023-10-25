@@ -27,7 +27,7 @@ life_cycle: 'pre-alpha'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://example.com/FIXME-template-source'
+source: 'https://github.com/UniversityofBrighton/2023-fair-multidimensional-media/'
 
 # Default branch of your lesson
 branch: 'main'
