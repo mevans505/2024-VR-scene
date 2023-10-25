@@ -218,14 +218,14 @@ draw primitives such
 as 2D polygons, line segments and 3D shapes using 
 coordinates (e.g. (1,0)) or mathematical functions.
 
-![](fig/square.svg){alt='square vector format'}
+![](fig/square.svg){alt='square vector format'width=60%}
 In the example above, a user can describe a 
 cube using 4 coordinates: (0,0), (1,0), (1,1) and (0,1).
 
 - The **raster image** is the pixel-based representation of the
 vector description.
 
-![](fig/square_raster.svg){alt='square raster format' width=70%}
+![](fig/square_raster.svg){alt='square raster format' width=60%}
 
 
 Now that we covered these concepts, we return to the definition of

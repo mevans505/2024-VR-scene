@@ -26,5 +26,3 @@ digitisation processes or synthetic
 images produced via software. These processes often result in multi-part,
 multi-format and, often, large 
 project files which describe the creation process. 
-
-
