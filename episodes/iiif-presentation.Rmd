@@ -1,0 +1,21 @@
+---
+title: 'IIIF Presentation'
+teaching: 10
+exercises: 2
+---
+
+
+Manifest
+
+Canvas - draw stuff
+
+Annotation page - This describes many items which will be displayed
+in the manifest, e.g. the pages of a book.
+
+Annotation - it is the view port in the Canvas
+
+which will have some content to render on it. More than one annotation can co-exist
+in the canvas to grab a bit of it, and arrange itself across the width/height.
+Layering raster on the canvas is handled by simply listing various annotations one after the other.
+
+They are rendered in the order they are added, starting back-front.
