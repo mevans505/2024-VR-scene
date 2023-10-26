@@ -61,6 +61,7 @@ contact: 'K.Rodriguez@brighton.ac.uk'
 episodes:
 - introduction.Rmd
 - mutlidimensional-content.Rmd
+- uniform-resource-locators.Rmd
 - making-it-fair.Rmd
 - virtual-research-environment.Rmd
 - retrieving-and-curating-multidimensional-data.Rmd
