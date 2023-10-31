@@ -19,3 +19,5 @@ in the canvas to grab a bit of it, and arrange itself across the width/height.
 Layering raster on the canvas is handled by simply listing various annotations one after the other.
 
 They are rendered in the order they are added, starting back-front.
+
+
