@@ -125,7 +125,7 @@ quality=gray
 :::: solution
 
 [https://iiif.wellcomecollection.org/image/b3047744x_0001.jp2/0,0,200,200/500,/!180/color.jpg](https://iiif.wellcomecollection.org/image/b3047744x_0001.jp2/0,0,200,200/500,/!180/color.jpg)
-
+:::::
 
 :::::
 
