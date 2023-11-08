@@ -300,7 +300,7 @@ See below an example of a IIIF Manifest written in JSON:
   ]
 }
 ```
-From: IIIF Cookbook recepies: https://iiif.io/api/cookbook/recipe/0001-mvm-image/
+From: IIIF Cookbook recipes: https://iiif.io/api/cookbook/recipe/0001-mvm-image/
 
 Note that it contains the following information:
 
