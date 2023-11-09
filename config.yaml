@@ -11,7 +11,7 @@
 carpentry: 'incubator'
 
 # Overall title for pages.
-title: 'FAIR Multidimensional Data'
+title: 'FAIR Multidimensional Data for VR'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: '2023-10-20'
@@ -27,7 +27,7 @@ life_cycle: 'pre-alpha'
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/UniversityofBrighton/2023-fair-multidimensional-media/'
+source: 'https://github.com/karina-rodriguez/2023-linked-data-VR'
 
 # Default branch of your lesson
 branch: 'main'
@@ -61,10 +61,7 @@ contact: 'K.Rodriguez@brighton.ac.uk'
 episodes:
 - introduction.Rmd
 - mutlidimensional-content.Rmd
-- uniform-resource-locators.Rmd
 - making-it-fair.Rmd
-- virtual-research-environment.Rmd
-- retrieving-and-curating-multidimensional-data.Rmd
 - interoperable-frameworks.Rmd
 - storytelling-with-mutltidimensional-media.Rmd
 - links.Rmd
