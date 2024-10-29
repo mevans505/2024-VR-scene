@@ -283,6 +283,7 @@ vector description.
 ![Raster square](fig/square_raster.svg){alt='square raster format' width=60%}
 
 
+
 **3D models** are *rendered*
 as raster images on the screen, smartphone or any
 other display device (e.g. a Virtual Reality headset).
