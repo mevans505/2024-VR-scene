@@ -95,7 +95,7 @@ across websites given an input image. See examples:
 - [Flickr](https://www.flickr.com/)
 - [Open Game Art](https://opengameart.org/textures/all)
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::: challenge
 
 ## Challenge 1: Search for images
 
@@ -105,7 +105,7 @@ Using the camera image on the search bar, search for the image.
 ![The Tale of Peter Rabbit / Beatrix Potter - 1920 - National Library of France, France - No Copyright - Other Known Legal Restrictions.
 https://www.europeana.eu/item/794/ark__12148_bpt6k9798997w](fig/Europeana.eu-794-ark__12148_bpt6k9798997w-c5e37f95e1fa32b494a103e2f3d5baf2.jpeg){alt="Peter Rabit magazine"}
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::: 
 
 ### Image Formats
 
@@ -147,12 +147,17 @@ TV and movies are usually displayed at 24 FPS.
 ### Video Platforms
 Video is also a popular type of content, as there are many platforms
 on the web which allow
-users to easily share their media. See examples:
+users to easily share their media. See examples including
+360 video:
 
 - [YouTube](https://www.youtube.com)
+- [YouTube 360](https://www.youtube.com/channel/UCzuqhhs6NWbgTzMuM09WKDQ)
 - [Vimeo](https://vimeo.com/)
+- [Vimeo 360 cinema](https://vimeo.com/channels/360vr)
+- [Google Arts and Culture 360 video](https://artsandculture.google.com/project/360-videos)
+- [AirPano 360 video](https://www.airpano.com/360video_list.php)
 - [Wikimedia](https://commons.wikimedia.org/wiki/Category:Videos)
-
+- [Wikimedia 360 video](https://commons.wikimedia.org/wiki/Category:360-degree_videos)
 
 Note that while images can be downloaded by web browsers, 
 it is not always possible to download video 
@@ -165,13 +170,18 @@ those supported by webpages:
 
 - MP4 (MPEG-4) is a common *container format* which can play
 in almost all devices and over the web.
-- WebM and OGG are open video formats.
+- WebM and OGG are open video formats. [WebM](https://www.webmproject.org/) is used extensively in Wikimedia.
 
 There are many others [formats](https://en.wikipedia.org/wiki/Video_file_format).
 
 Note that videos with higher resolution and FPS will 
 be larger and hence, challenging 
 to send via email or download over the web. 
+
+Video can be used with most Game Engines, for example:
+
+- [Unity Video Player Component](https://docs.unity3d.com/2023.2/Documentation/Manual/class-VideoPlayer.html)
+- [Godot Video Stream Player](https://docs.godotengine.org/en/stable/tutorials/animation/playing_videos.html)
 
 ## 3D Images or Models
 A **3D model** is a 3-dimensional type of media. It 
@@ -183,27 +193,19 @@ and displayed in the computer, we need to understand two concepts
 **vector** and **raster** data.
 
 
-In this lesson, we won't cover how **3D models** are created.
-There are resources here to learn more about processes:
-
-- [CARARE Introduction to the 3D workflow](https://carare.gitbook.io/share-3d-guidelines/3d-process/context)
-- [Photogrammetry](https://sketchfab.com/blogs/community/how-to-set-up-a-successful-photogrammetry-project)
-- [Basic principles and tips for 3D digitisation of cultural heritage
-](https://digital-strategy.ec.europa.eu/en/library/basic-principles-and-tips-3d-digitisation-cultural-heritage)
-
 ### Vector Data
 Regardless of the process, the output of these processes, 
 in most cases will produce a **3D model** file which 
 contains **vector** data. 
 
-<!--
+
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
 This exercise requires having access to blank paper and a square-grid paper.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: challenge 
+:::::::::  challenge 
 
 ## Challenge 1: Drawing a 3D-cube
 
@@ -214,36 +216,34 @@ height = 1
 width = 1  
 
 depth = 1
-
+::::::::::::::::::::::::::::::::::::: 
 ::::::::::::::::::::::::::::::::::::: solution 
 
 To describe a 3D cube, the file will contain
 data describing the 6 squares using 
 point coordinates (e.g. (1,0,0)).
 
-![](fig/cube.png){alt='cube vector format'width=60%}
+![Cube](fig/cube.png){alt='cube vector format'width=60%}
 
 
 In the example below, a squareis described
 using 4 points or *vertices*: (0,0,0), (1,0,0), (1,1,0) and (0,1,0).
 
 
-![](fig/square.svg){alt='square vector format'width=60%}
+![Square](fig/square.svg){alt='square vector format'width=60%}
 
 :::::::::::::::::::::::::::::::::
 
 
-::::::::::::::::::::::::::::::::::::: solution 
 
-
-:::::::::::::::::::::::::::::::::
+:::::::::  challenge 
 
 ## Challenge 2: Draw it again
 
 Now, using a square-grid paper draw again your cube or box using the 
 same dimensions. In this exercise you must decide whether to fill or
 not the squares of the grid to draw your 3-dimensional box.
-
+::::::::::::::::::::::::::::::::::::: 
 :::::::::::::::::::::::: solution 
 
 You have just experienced the concept of **Rasterisation**. 
@@ -253,10 +253,13 @@ on what information to display on the screen. It must decide
 whether a pixel should be drawn or not to represent the 
 information of the 3D-cube you drawn.
 
+![Raster square](fig/square_raster.svg){alt='square raster format' width=60%}
+
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
--->
+
 This data include:
 
 - Points or vertices described in a 3D space.
@@ -277,9 +280,7 @@ vector description.
 ![&copy; [Drummyfish](https://commons.wikimedia.org/wiki/File:Top-left_triangle_rasterization_rule.gif) under CC0](fig/Top-left_triangle_rasterization_rule.gif){alt='square raster format' width=60%}
 
 
-<!--
-![](fig/square_raster.svg){alt='square raster format' width=60%}
--->
+
 
 
 **3D models** are *rendered*
