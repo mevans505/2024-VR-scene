@@ -63,9 +63,15 @@ episodes:
 - mutlidimensional-content.Rmd
 - making-it-fair.Rmd
 - interoperable-frameworks.Rmd
-- storytelling-with-mutltidimensional-media.Rmd
+- polygonal-meshes.Rmd
+- coordinate-systems.Rmd
+- cameras.Rmd
+- controllers.Rmd
+- navigation.Rmd
+- ray-casting-and-collision.Rmd
+- lighting.Rmd
+- shaders.Rmd
 - links.Rmd
-- bringing-content-into-vr.Rmd
 
 # Information for Learners
 learners:
