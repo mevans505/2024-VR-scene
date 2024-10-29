@@ -95,7 +95,7 @@ across websites given an input image. See examples:
 - [Flickr](https://www.flickr.com/)
 - [Open Game Art](https://opengameart.org/textures/all)
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::: challenge
 
 ## Challenge 1: Search for images
 
@@ -105,7 +105,7 @@ Using the camera image on the search bar, search for the image.
 ![The Tale of Peter Rabbit / Beatrix Potter - 1920 - National Library of France, France - No Copyright - Other Known Legal Restrictions.
 https://www.europeana.eu/item/794/ark__12148_bpt6k9798997w](fig/Europeana.eu-794-ark__12148_bpt6k9798997w-c5e37f95e1fa32b494a103e2f3d5baf2.jpeg){alt="Peter Rabit magazine"}
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::: 
 
 ### Image Formats
 
@@ -205,7 +205,7 @@ This exercise requires having access to blank paper and a square-grid paper.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: challenge 
+:::::::::  challenge 
 
 ## Challenge 1: Drawing a 3D-cube
 
@@ -216,7 +216,7 @@ height = 1
 width = 1  
 
 depth = 1
-
+::::::::::::::::::::::::::::::::::::: 
 ::::::::::::::::::::::::::::::::::::: solution 
 
 To describe a 3D cube, the file will contain
@@ -235,17 +235,15 @@ using 4 points or *vertices*: (0,0,0), (1,0,0), (1,1,0) and (0,1,0).
 :::::::::::::::::::::::::::::::::
 
 
-::::::::::::::::::::::::::::::::::::: solution 
 
-
-:::::::::::::::::::::::::::::::::
+:::::::::  challenge 
 
 ## Challenge 2: Draw it again
 
 Now, using a square-grid paper draw again your cube or box using the 
 same dimensions. In this exercise you must decide whether to fill or
 not the squares of the grid to draw your 3-dimensional box.
-
+::::::::::::::::::::::::::::::::::::: 
 :::::::::::::::::::::::: solution 
 
 You have just experienced the concept of **Rasterisation**. 
@@ -254,6 +252,9 @@ This challenge illustrates the decision made by the computer
 on what information to display on the screen. It must decide
 whether a pixel should be drawn or not to represent the 
 information of the 3D-cube you drawn.
+
+![Raster square](fig/square_raster.svg){alt='square raster format' width=60%}
+
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -279,8 +280,6 @@ vector description.
 ![&copy; [Drummyfish](https://commons.wikimedia.org/wiki/File:Top-left_triangle_rasterization_rule.gif) under CC0](fig/Top-left_triangle_rasterization_rule.gif){alt='square raster format' width=60%}
 
 
-
-![Raster square](fig/square_raster.svg){alt='square raster format' width=60%}
 
 
 
