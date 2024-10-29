@@ -1,22 +1,24 @@
 ---
-title: 'Basics of Multidimensional Media'
+title: 'Basics of Multidimensional Content'
 teaching: 10
 exercises: 2
 ---
 
-**Multidimensional** media is a term which 
-covers various types of non-textual data.
-It is often used to refer to 
-representational and derivative media created through
+Although 3D data is mostly used for VR scenes,
+any type of visual content can enrich VR experiences.
+We use the term **multidimensional media** to
+cover various types of non-textual data. 
+
+The term **Multidimensional media** refers to 
+*representational and derivative media* created through
 digitisation processes or synthetic 
 images produced via software. These processes often result in multi-part,
 multi-format and, often, large 
-project files which describe the creation process. 
+project files. 
 
-
-We refer to media as **multidimensional**. 
-This is because data experts structure information
-according to the **dimensions** used to store the data
+Often, the term **multidimensional** is used interchangeably 
+with 2D/3D media. This often refers to the number **dimensions** 
+used to store the data
 in the computer system. 
 
 For example, the **name** of one of your friends can
@@ -79,7 +81,8 @@ by Artificial Intelligence software).
 
 Given the wide-availability of camera sensors, including
 on smart phones and digital cameras,
-digital images are the widest available multidimensional media.
+digital images are the widest available multidimensional media. In VR,
+images are used for textures of assets.
 
 ### Image Platforms
 Collections of images are found across many website, and popular search engines
@@ -90,6 +93,7 @@ across websites given an input image. See examples:
 - [Adobe Stock](https://stock.adobe.com/)
 - [Shutterstock](https://www.shutterstock.com/)
 - [Flickr](https://www.flickr.com/)
+- [Open Game Art](https://opengameart.org/textures/all)
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
@@ -117,7 +121,6 @@ Digital photography will make use
 of other formats, such as *DNG* or *RAW* to store raw image information. 
 Other software store image projects in proprietary formats, meaning files
 can only be open by these.
-
 
 
 ## Digital Video
