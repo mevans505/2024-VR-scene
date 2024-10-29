@@ -279,9 +279,8 @@ vector description.
 ![&copy; [Drummyfish](https://commons.wikimedia.org/wiki/File:Top-left_triangle_rasterization_rule.gif) under CC0](fig/Top-left_triangle_rasterization_rule.gif){alt='square raster format' width=60%}
 
 
-<!--
+
 ![](fig/square_raster.svg){alt='square raster format' width=60%}
--->
 
 
 **3D models** are *rendered*
