@@ -1,5 +1,5 @@
 ---
-title: 'Types of Multidimensional Media'
+title: 'Basics of Multidimensional Media'
 teaching: 10
 exercises: 2
 ---
