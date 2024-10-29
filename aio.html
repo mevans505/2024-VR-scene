@@ -637,12 +637,21 @@ reference, TV and movies are usually displayed at 24 FPS.</p>
 <h3 id="video-platforms">Video Platforms<a class="anchor" aria-label="anchor" href="#video-platforms"></a>
 </h3>
 <p>Video is also a popular type of content, as there are many platforms
-on the web which allow users to easily share their media. See
-examples:</p>
+on the web which allow users to easily share their media. See examples
+including 360 video:</p>
 <ul>
 <li><a href="https://www.youtube.com" class="external-link">YouTube</a></li>
+<li><a href="https://www.youtube.com/channel/UCzuqhhs6NWbgTzMuM09WKDQ" class="external-link">YouTube
+360</a></li>
 <li><a href="https://vimeo.com/" class="external-link">Vimeo</a></li>
+<li><a href="https://vimeo.com/channels/360vr" class="external-link">Vimeo 360 cinema</a></li>
+<li><a href="https://artsandculture.google.com/project/360-videos" class="external-link">Google Arts
+and Culture 360 video</a></li>
+<li><a href="https://www.airpano.com/360video_list.php" class="external-link">AirPano 360
+video</a></li>
 <li><a href="https://commons.wikimedia.org/wiki/Category:Videos" class="external-link">Wikimedia</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/Category:360-degree_videos" class="external-link">Wikimedia
+360 video</a></li>
 </ul>
 <p>Note that while images can be downloaded by web browsers, it is not
 always possible to download video from these websites. Many times, video
@@ -656,11 +665,19 @@ supported by webpages:</p>
 <ul>
 <li>MP4 (MPEG-4) is a common <em>container format</em> which can play in
 almost all devices and over the web.</li>
-<li>WebM and OGG are open video formats.</li>
+<li>WebM and OGG are open video formats. <a href="https://www.webmproject.org/" class="external-link">WebM</a> is used extensively in
+Wikimedia.</li>
 </ul>
 <p>There are many others <a href="https://en.wikipedia.org/wiki/Video_file_format" class="external-link">formats</a>.</p>
 <p>Note that videos with higher resolution and FPS will be larger and
 hence, challenging to send via email or download over the web.</p>
+<p>Video can be used with most Game Engines, for example:</p>
+<ul>
+<li><a href="https://docs.unity3d.com/2023.2/Documentation/Manual/class-VideoPlayer.html" class="external-link">Unity
+Video Player Component</a></li>
+<li><a href="https://docs.godotengine.org/en/stable/tutorials/animation/playing_videos.html" class="external-link">Godot
+Video Stream Player</a></li>
+</ul>
 </div>
 </section><section><h2 class="section-heading" id="d-images-or-models">3D Images or Models<a class="anchor" aria-label="anchor" href="#d-images-or-models"></a>
 </h2>
@@ -671,82 +688,78 @@ appearance, e.g. colour information.</p>
 <p>To understand how <strong>3D models</strong> are described and
 displayed in the computer, we need to understand two concepts
 <strong>vector</strong> and <strong>raster</strong> data.</p>
-<p>In this lesson, we won’t cover how <strong>3D models</strong> are
-created. There are resources here to learn more about processes:</p>
-<ul>
-<li><a href="https://carare.gitbook.io/share-3d-guidelines/3d-process/context" class="external-link">CARARE
-Introduction to the 3D workflow</a></li>
-<li><a href="https://sketchfab.com/blogs/community/how-to-set-up-a-successful-photogrammetry-project" class="external-link">Photogrammetry</a></li>
-<li><a href="https://digital-strategy.ec.europa.eu/en/library/basic-principles-and-tips-3d-digitisation-cultural-heritage" class="external-link">Basic
-principles and tips for 3D digitisation of cultural heritage</a></li>
-</ul>
 <div class="section level3">
 <h3 id="vector-data">Vector Data<a class="anchor" aria-label="anchor" href="#vector-data"></a>
 </h3>
 <p>Regardless of the process, the output of these processes, in most
 cases will produce a <strong>3D model</strong> file which contains
 <strong>vector</strong> data.</p>
-<!--
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
 
-This exercise requires having access to blank paper and a square-grid paper.
-
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: challenge
-
-## Challenge 1: Drawing a 3D-cube
-
-In a piece of blank paper, draw a 3-dimensional cube or box of dimensions:
-
-height = 1
-
-width = 1
-
-depth = 1
-
-::::::::::::::::::::::::::::::::::::: solution
-
-To describe a 3D cube, the file will contain
-data describing the 6 squares using
-point coordinates (e.g. (1,0,0)).
-
-![](fig/cube.png){alt='cube vector format'width=60%}
-
-
-In the example below, a squareis described
-using 4 points or *vertices*: (0,0,0), (1,0,0), (1,1,0) and (0,1,0).
-
-
-![](fig/square.svg){alt='square vector format'width=60%}
-
-:::::::::::::::::::::::::::::::::
-
-
-::::::::::::::::::::::::::::::::::::: solution
-
-
-:::::::::::::::::::::::::::::::::
-
-## Challenge 2: Draw it again
-
-Now, using a square-grid paper draw again your cube or box using the
-same dimensions. In this exercise you must decide whether to fill or
-not the squares of the grid to draw your 3-dimensional box.
-
-:::::::::::::::::::::::: solution
-
-You have just experienced the concept of **Rasterisation**.
-
-This challenge illustrates the decision made by the computer
-on what information to display on the screen. It must decide
-whether a pixel should be drawn or not to represent the
-information of the 3D-cube you drawn.
-
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
--->
+<div id="challenge-1-drawing-a-3d-cube" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="challenge-1-drawing-a-3d-cube" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Drawing a 3D-cube</h3>
+<div class="callout-content">
+<p>In a piece of blank paper, draw a 3-dimensional cube or box of
+dimensions:</p>
+<p>height = 1</p>
+<p>width = 1</p>
+<p>depth = 1</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<p>To describe a 3D cube, the file will contain data describing the 6
+squares using point coordinates (e.g. (1,0,0)).</p>
+<figure><img src="fig/cube.png" style="width:60.0%" alt="cube vector format" class="figure mx-auto d-block"><div class="figcaption">Cube</div>
+</figure><p>In the example below, a squareis described using 4 points or
+<em>vertices</em>: (0,0,0), (1,0,0), (1,1,0) and (0,1,0).</p>
+<figure><img src="fig/square.svg" style="width:60.0%" alt="square vector format" class="figure mx-auto d-block"><div class="figcaption">Square</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge-2-draw-it-again" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="challenge-2-draw-it-again" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Draw it again</h3>
+<div class="callout-content">
+<p>Now, using a square-grid paper draw again your cube or box using the
+same dimensions. In this exercise you must decide whether to fill or not
+the squares of the grid to draw your 3-dimensional box.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>You have just experienced the concept of
+<strong>Rasterisation</strong>.</p>
+<p>This challenge illustrates the decision made by the computer on what
+information to display on the screen. It must decide whether a pixel
+should be drawn or not to represent the information of the 3D-cube you
+drawn.</p>
+<figure><img src="fig/square_raster.svg" style="width:60.0%" alt="square raster format" class="figure mx-auto d-block"><div class="figcaption">Raster square</div>
+</figure>
+</div>
+</div>
+</div>
+</div>
 <p>This data include:</p>
 <ul>
 <li>Points or vertices described in a 3D space.</li>
@@ -767,9 +780,7 @@ image.</p>
 of the vector description.</p>
 <figure><img src="fig/Top-left_triangle_rasterization_rule.gif" style="width:60.0%" alt="square raster format" class="figure mx-auto d-block"><div class="figcaption">© <a href="https://commons.wikimedia.org/wiki/File:Top-left_triangle_rasterization_rule.gif" class="external-link">Drummyfish</a>
 under CC0</div>
-</figure><!--
-![](fig/square_raster.svg){alt='square raster format' width=60%}
---><p><strong>3D models</strong> are <em>rendered</em> as raster images on
+</figure><p><strong>3D models</strong> are <em>rendered</em> as raster images on
 the screen, smartphone or any other display device (e.g. a Virtual
 Reality headset). The computer will have to <em>compute</em> this raster
 image in real-time, which is why <strong>3D models</strong> which
@@ -1244,7 +1255,7 @@ quality=gray
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To create the url, you will need to combine the information according
 to the following url guidance:</p>
