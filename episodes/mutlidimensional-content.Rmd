@@ -223,14 +223,14 @@ To describe a 3D cube, the file will contain
 data describing the 6 squares using 
 point coordinates (e.g. (1,0,0)).
 
-![](fig/cube.png){alt='cube vector format'width=60%}
+![Cube](fig/cube.png){alt='cube vector format'width=60%}
 
 
 In the example below, a squareis described
 using 4 points or *vertices*: (0,0,0), (1,0,0), (1,1,0) and (0,1,0).
 
 
-![](fig/square.svg){alt='square vector format'width=60%}
+![Square](fig/square.svg){alt='square vector format'width=60%}
 
 :::::::::::::::::::::::::::::::::
 
@@ -280,7 +280,7 @@ vector description.
 
 
 
-![](fig/square_raster.svg){alt='square raster format' width=60%}
+![Raster square](fig/square_raster.svg){alt='square raster format' width=60%}
 
 
 **3D models** are *rendered*
