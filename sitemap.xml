@@ -16,6 +16,15 @@
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/bringing-content-into-vr.html</loc>
   </url>
   <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/cameras.html</loc>
+  </url>
+  <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/controllers.html</loc>
+  </url>
+  <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/coordinate-systems.html</loc>
+  </url>
+  <url>
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/images.html</loc>
   </url>
   <url>
@@ -37,6 +46,15 @@
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/bringing-content-into-vr.html</loc>
   </url>
   <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/cameras.html</loc>
+  </url>
+  <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/controllers.html</loc>
+  </url>
+  <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/coordinate-systems.html</loc>
+  </url>
+  <url>
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/images.html</loc>
   </url>
   <url>
@@ -55,6 +73,9 @@
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/key-points.html</loc>
   </url>
   <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/lighting.html</loc>
+  </url>
+  <url>
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/links.html</loc>
   </url>
   <url>
@@ -64,10 +85,22 @@
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/mutlidimensional-content.html</loc>
   </url>
   <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/navigation.html</loc>
+  </url>
+  <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/polygonal-meshes.html</loc>
+  </url>
+  <url>
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/profiles.html</loc>
   </url>
   <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/ray-casting-and-collision.html</loc>
+  </url>
+  <url>
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/shaders.html</loc>
   </url>
   <url>
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/instructor/storytelling-with-mutltidimensional-media.html</loc>
@@ -85,6 +118,9 @@
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/key-points.html</loc>
   </url>
   <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/lighting.html</loc>
+  </url>
+  <url>
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/links.html</loc>
   </url>
   <url>
@@ -94,10 +130,22 @@
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/mutlidimensional-content.html</loc>
   </url>
   <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/navigation.html</loc>
+  </url>
+  <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/polygonal-meshes.html</loc>
+  </url>
+  <url>
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/profiles.html</loc>
   </url>
   <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/ray-casting-and-collision.html</loc>
+  </url>
+  <url>
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/shaders.html</loc>
   </url>
   <url>
     <loc>https://karina-rodriguez.github.io/2023-linked-data-VR/storytelling-with-mutltidimensional-media.html</loc>
