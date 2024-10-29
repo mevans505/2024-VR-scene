@@ -332,7 +332,7 @@ Content adopted from [IIIF Training](https://training.iiif.io/) &copy IIIF under
 
 
 
-## Tutorial
+## Excercise
 
 For this tutorial, there is a variety of code
 for you to experiment bringing content to multidimensional media 
