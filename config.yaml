@@ -70,6 +70,8 @@ episodes:
 - navigation.Rmd
 - ray-casting-and-collision.Rmd
 - lighting.Rmd
+- animations.Rmd
+- videos.Rmd
 - shaders.Rmd
 - links.Rmd
 
