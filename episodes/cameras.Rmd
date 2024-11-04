@@ -19,3 +19,17 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## What is a camera in a 3D scene?
+
+A camera in a 3D space is a perspective. It is a virtual viewpoint from which the scene is rendered.
+This perspective defines what is visible and how it is seen.
+
+The perspective is defined by the camera's:
+    - Position
+      - Where the camera is situated within the 3d scene
+    - Orientation
+      - The direction the camera is facing
+    - Field of View
+      - How wide the camera's view is, how much of the scene is visible from this perspective
+
+
