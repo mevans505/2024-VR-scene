@@ -34,4 +34,15 @@ The perspective is defined by the camera's:
 
 
 ## How to create cameras for VR and non-VR environments
-In game engines such as unity to create a camera it is as simple as drag and drop
+
+A camera is created differently in each engine, but all are as simple as drag and dropping them into the environment
+
+### Unity
+```txt
+In the editor you right left click on the hierarchy of the environment and then in the drop-down menu click camera which will create a new camera in the environment
+```
+
+### Unreal Engine
+```txt
+In the editor you click on window followed by place anchors then all classes and then to place a camera you drag the camera anchor into the environment where you want it
+```
