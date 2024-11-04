@@ -33,3 +33,5 @@ The perspective is defined by the camera's:
       - How wide the camera's view is, how much of the scene is visible from this perspective
 
 
+## How to create cameras for VR and non-VR environments
+In game engines such as unity to create a camera it is as simple as drag and drop
