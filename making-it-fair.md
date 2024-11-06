@@ -1,10 +1,16 @@
 ---
-title: 'Making it FAIR'
+title: 'Web3.0: XR content discoverable'
 teaching: 10
 exercises: 2
 ---
 
 
+Emphasis should be placed in creating content
+which is discoverable to other experiences, applications and environments.
+
+
+
+Think of [Web3.0 technologies](https://www.youtube.com/watch?v=0tZFQs7qBfQ), such as descentralised content using [IPFS](https://ipfs.tech/).
 
 ## Making it FAIR
 Emphasis should be placed in following the FAIR principles
