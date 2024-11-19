@@ -63,17 +63,16 @@ episodes:
 - mutlidimensional-content.Rmd
 - making-it-fair.Rmd
 - interoperable-frameworks.Rmd
-- polygonal-meshes.Rmd
-- coordinate-systems.Rmd
-- cameras.Rmd
-- controllers.Rmd
-- navigation.Rmd
-- ray-casting-and-collision.Rmd
-- lighting.Rmd
-- animations.Rmd
-- videos.Rmd
-- shaders.Rmd
-- particle-effects.Rmd
+- polygonal-meshes.Rmd # Group 1
+- coordinate-systems.Rmd # Group 2
+- cameras.Rmd # Group 4
+- controllers.Rmd # Group 5
+- navigation.Rmd  # Group 6
+- ray-casting-and-collision.Rmd  # Group 7
+- lighting.Rmd  # Group 8
+- animations.Rmd  # Group 9
+- shaders.Rmd  # Group 10
+- particle-effects.Rmd  # Group 11
 - links.Rmd
 
 # Information for Learners

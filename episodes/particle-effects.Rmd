@@ -4,6 +4,9 @@ teaching: 10
 exercises: 2
 ---
 
+### Group 11: Lewis Charlie, Collis James, Evans Max
+
+
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What are particle systems, and how are they different to single rigid bodies?
