@@ -23,10 +23,12 @@ coordinate systems.
 - Demonstrate how affine transformations work, including using matrices.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-What are Coordinate Systems in 3D?
+
+
+## What are Coordinate Systems in 3D?
 A 3D coordinate system is a mathematical framework used to describe the position of points, lines, and objects in three-dimensional space. The system is defined by three perpendicular axes, typically labeled X, Y, and Z. Each point in space is described by a set of three coordinates (𝑥,𝑦,𝑧) which represent its distance from the origin (the point where all three axes meet, typically at (0,0,0).
 
-Right and Left handed coordinate systems:
+### Right and Left handed coordinate systems:
 
 Right-Handed Coordinate System: In a right-handed system, the thumb, index, and middle fingers of the right hand can be used to represent the X, Y, and Z axes, respectively:
 
@@ -35,7 +37,7 @@ Index finger points in the direction of the Y-axis.
 Middle finger points in the direction of the Z-axis.
 If you curl your fingers from the X-axis toward the Y-axis, your thumb will point in the direction of the Z-axis.
 
-Left-Handed Coordinate System: This is the opposite configuration. In a left-handed system:
+### Left-Handed Coordinate System: This is the opposite configuration. In a left-handed system:
 
 Thumb points in the direction of the X-axis.
 Index finger points in the direction of the Y-axis.
@@ -61,7 +63,7 @@ Translation matrix (in homogeneous coordinates):
 
 Where the object’s coordinates (𝑥,𝑦,𝑧) are multiplied by this matrix to shift the object by the desired amount.
 
-​Rotation: Rotating an object around one of the three axes (X, Y, or Z) by a certain angle. Rotations are typically represented using rotation matrices for each axis.
+Rotation: Rotating an object around one of the three axes (X, Y, or Z) by a certain angle. Rotations are typically represented using rotation matrices for each axis.
 
 Example: Rotation about the Z-axis by an angle 𝜃:
 
@@ -95,18 +97,18 @@ A =
 [a31 a32 a33 tz]
 [0   0   0   1 ]
 
-Where The upper-left 3×3 part of the matrix (coefficients 𝑎ij) handles rotation, scaling, and shearing.
+### Where The upper-left 3×3 part of the matrix (coefficients 𝑎ij) handles rotation, scaling, and shearing.
 The last column [𝑡𝑥,𝑡𝑦,𝑡𝑧,1] represents the translation.
 The fourth row is to maintain the matrix format for homogeneous coordinates.
 
-How do they work?
+### How do they work?
 Affine transformations in 3D can be applied using matrix multiplication. To transform a point (𝑥,𝑦,z) we represent it in homogeneous coordinates as [x,y,z,1] where the extra 1 allows for translation to be included in the matrix.
 
 First, we would need to apply transformation, rotation and scaling as matrices (shown above) and then multiply them together using the formula Matrix M = Translation Matrix * Rotation Matrix * Scaling Matrix.
 
 The matrix M would then represent This matrix M represents the combined scaling, rotation, and translation. Once calculated, it can be used to transform any point in space by multiplying it by the vector [x,y,z,1].
 
-Conclusion:
+### Conclusion:
 
 3D coordinate systems are based on X, Y, and Z axes, with right-handed and left-handed variants.
 Object transformations, include translation, rotation, and scaling.
