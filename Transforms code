@@ -1,0 +1,65 @@
+using UnityEngine;
+
+public class CoordinateSystemDemo : MonoBehaviour
+{
+    public Transform targetObject;  // The object we want to transform
+    private Vector3 initialPosition;
+    private Vector3 initialScale;
+    private Quaternion initialRotation;
+
+    void Start()
+    {
+        // Store the initial transformation values of the object
+        initialPosition = targetObject.position;
+        initialScale = targetObject.localScale;
+        initialRotation = targetObject.rotation;
+
+        // Example translations, rotations and scaling using Unity's Transform
+        PerformTransformations();
+    }
+
+    void PerformTransformations()
+    {
+        // 1. Translation using Transform
+        Vector3 translation = new Vector3(3, 0, 0); // Move 3 units along the X-axis
+        targetObject.Translate(translation);
+
+        // 2. Rotation using Transform
+        Quaternion rotation = Quaternion.Euler(0, 45, 0); // Rotate 45 degrees around the Y-axis
+        targetObject.Rotate(rotation.eulerAngles);
+
+        // 3. Scaling using Transform
+        Vector3 scale = new Vector3(2, 2, 2); // Double the size of the object
+        targetObject.localScale = Vector3.Scale(targetObject.localScale, scale);
+
+        // Log final transformation
+        Debug.Log("Position: " + targetObject.position + ", Rotation: " + targetObject.rotation.eulerAngles + ", Scale: " + targetObject.localScale);
+    }
+
+    void Update()
+    {
+        // Affine transformations using matrices in Unity
+        if (Input.GetKeyDown(KeyCode.Space))        
+            ApplyAffineTransformation();     
+    }
+
+    void ApplyAffineTransformation()
+    {
+        // Create a translation matrix
+        Matrix4x4 translationMatrix = Matrix4x4.Translate(new Vector3(5, 0, 0)); // Move 5 units along X
+
+        // Create a rotation matrix (rotate 45 degrees around the Y-axis)
+        Matrix4x4 rotationMatrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
+
+        // Create a scaling matrix (scale by 1.5 on all axes)
+        Matrix4x4 scalingMatrix = Matrix4x4.Scale(new Vector3(1.5f, 1.5f, 1.5f));
+
+        // Combine all transformations into a single affine matrix
+        Matrix4x4 affineMatrix = translationMatrix * rotationMatrix * scalingMatrix;
+
+        // Apply the affine matrix to the target object's position, rotation, and scale
+        targetObject.position = affineMatrix.MultiplyPoint3x4(initialPosition);
+        targetObject.rotation = Quaternion.LookRotation(affineMatrix.GetColumn(2), affineMatrix.GetColumn(1)); // Recreate rotation from the matrix
+        targetObject.localScale = new Vector3(affineMatrix.m00, affineMatrix.m11, affineMatrix.m22); // Extract scale from the matrix
+    }
+}
