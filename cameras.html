@@ -250,12 +250,27 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         7. Cameras
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#what-is-a-camera-in-a-3d-scene">What is a camera in a 3D scene?</a></li>
+<li><a href="#explain-what-types-of-cameras-there-are-in-game-engine-and-their-typical-parameters">Explain what types of cameras there are in Game Engine and their
+typical parameters</a></li>
+<li><a href="#first-person">First Person</a></li>
+<li><a href="#third-person">Third Person</a></li>
+<li><a href="#top-down">Top Down</a></li>
+<li><a href="#side-scrolling-camera">Side Scrolling Camera</a></li>
+<li><a href="#how-to-create-cameras-for-vr-and-non-vr-environments">How to create cameras for VR and non-VR environments</a></li>
+<li><a href="#code-examples">Code Examples</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -401,6 +416,7 @@
         </div>
 
         
+
 <div class="section level3">
 <h3 id="group-4-reid-abbie-crane-alan-wood-alexander-blackburn-ben">Group 4: Reid Abbie, Crane Alan, Wood Alexander, Blackburn Ben<a class="anchor" aria-label="anchor" href="#group-4-reid-abbie-crane-alan-wood-alexander-blackburn-ben"></a></h3>
 <div class="overview card">
@@ -428,14 +444,72 @@ typical parameters</li>
 </div>
 </div>
 </div>
+</div>
+<section><h2 class="section-heading" id="what-is-a-camera-in-a-3d-scene">What is a camera in a 3D scene?<a class="anchor" aria-label="anchor" href="#what-is-a-camera-in-a-3d-scene"></a></h2>
+<hr class="half-width"><p>A camera in a 3D space is a perspective. It is a virtual viewpoint
+from which the scene is rendered. This perspective defines what is
+visible and how it is seen.</p>
+<p>The perspective is defined by the camera’s: - Position - Where the
+camera is situated within the 3d scene - Orientation - The direction the
+camera is facing - Field of View - How wide the camera’s view is, how
+much of the scene is visible from this perspective</p>
+</section><section><h2 class="section-heading" id="explain-what-types-of-cameras-there-are-in-game-engine-and-their-typical-parameters">Explain what types of cameras there are in Game Engine and their
+typical parameters<a class="anchor" aria-label="anchor" href="#explain-what-types-of-cameras-there-are-in-game-engine-and-their-typical-parameters"></a></h2>
+<hr class="half-width"></section><section><h2 class="section-heading" id="first-person">First Person<a class="anchor" aria-label="anchor" href="#first-person"></a></h2>
+<hr class="half-width"><p>A first-person camera gives the view from a character’s point of view
+and replicates human vision. This camera type is often used for FPS and
+action games.</p>
+<p>Parameters of first-person camera field of view (FOV) = How large the
+camera’s peripheral vision is. Camera sway and head bobbing = to
+simulate head movements when walking. Camera Shake = used to show
+vibrations from nearby events such as explosions. Motion blur - used to
+simulate blur experienced by the eyes during fast movement</p>
+</section><section><h2 class="section-heading" id="third-person">Third Person<a class="anchor" aria-label="anchor" href="#third-person"></a></h2>
+<hr class="half-width"><p>A third-person view is taken from behind and slightly above the
+player’s character. This camera type is often used within action and
+role-playing games.</p>
+<p>Parameters of a third-person camera - distance of the following
+camera from the character - the angle of the camera position - collision
+detection to ensure the camera navigates within the environment
+correctly</p>
+</section><section><h2 class="section-heading" id="top-down">Top Down<a class="anchor" aria-label="anchor" href="#top-down"></a></h2>
+<hr class="half-width"><p>A top-down view gives an aerial view of the character’s position.
+camera rotation the angle of the camera position camera movement = move
+with character or static</p>
+</section><section><h2 class="section-heading" id="side-scrolling-camera">Side Scrolling Camera<a class="anchor" aria-label="anchor" href="#side-scrolling-camera"></a></h2>
+<hr class="half-width"><p>provides the user with a side-on angle of a 2d plane; this camera
+type is used in platformer games, such as Mario.</p>
+<p>Camera following direction = Does the camera scroll vertically or
+horizontally Camera Movement = move with characters’ position or static
+Camera bounds = where the camera can/cannot move</p>
+</section><section><h2 class="section-heading" id="how-to-create-cameras-for-vr-and-non-vr-environments">How to create cameras for VR and non-VR environments<a class="anchor" aria-label="anchor" href="#how-to-create-cameras-for-vr-and-non-vr-environments"></a></h2>
+<hr class="half-width"><p>A camera is created differently in each engine, but all are as simple
+as drag and dropping them into the environment</p>
+<div class="section level3">
+<h3 id="unity">Unity<a class="anchor" aria-label="anchor" href="#unity"></a></h3>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">TXT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode txt" tabindex="0"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>In the editor you right left click on the hierarchy of the environment and then in the drop-down menu click camera which will create a new camera in the environment.</span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="unreal-engine">Unreal Engine<a class="anchor" aria-label="anchor" href="#unreal-engine"></a></h3>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">TXT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode txt" tabindex="0"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>In the editor you click on window followed by place anchors then all classes and then to place a camera you drag the camera anchor into the environment where you want it</span></code></pre>
+</div>
+</div>
+</section><section><h2 class="section-heading" id="code-examples">Code Examples<a class="anchor" aria-label="anchor" href="#code-examples"></a></h2>
+<hr class="half-width"><p><a href="https://youtu.be/DXri5QRC3HU?feature=shared" class="external-link uri">https://youtu.be/DXri5QRC3HU?feature=shared</a></p>
+<p><a href="https://youtu.be/xvyrzwwU1DE?feature=shared" class="external-link uri">https://youtu.be/xvyrzwwU1DE?feature=shared</a></p>
+<p><a href="https://youtu.be/OIxjcScxwaw?feature=shared" class="external-link uri">https://youtu.be/OIxjcScxwaw?feature=shared</a></p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div>
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="coordinate-systems.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="controllers.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
