@@ -241,12 +241,19 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         6. Coordinate Systems and Transformations
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#what-are-coordinate-systems-in-3d">What are Coordinate Systems in 3D?</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -403,6 +410,7 @@
         </div>
 
         
+
 <div class="section level3">
 <h3 id="group-2-crook-cameron-parmenter-daniel">Group 2: Crook Cameron, Parmenter Daniel<a class="anchor" aria-label="anchor" href="#group-2-crook-cameron-parmenter-daniel"></a></h3>
 <div class="overview card">
@@ -432,14 +440,16 @@ matrices.</li>
 </div>
 </div>
 </div>
-<p>What are Coordinate Systems in 3D? A 3D coordinate system is a
-mathematical framework used to describe the position of points, lines,
-and objects in three-dimensional space. The system is defined by three
-perpendicular axes, typically labeled X, Y, and Z. Each point in space
-is described by a set of three coordinates (𝑥,𝑦,𝑧) which represent its
-distance from the origin (the point where all three axes meet, typically
-at (0,0,0).</p>
-<p>Right and Left handed coordinate systems:</p>
+</div>
+<section><h2 class="section-heading" id="what-are-coordinate-systems-in-3d">What are Coordinate Systems in 3D?<a class="anchor" aria-label="anchor" href="#what-are-coordinate-systems-in-3d"></a></h2>
+<hr class="half-width"><p>A 3D coordinate system is a mathematical framework used to describe
+the position of points, lines, and objects in three-dimensional space.
+The system is defined by three perpendicular axes, typically labeled X,
+Y, and Z. Each point in space is described by a set of three coordinates
+(𝑥,𝑦,𝑧) which represent its distance from the origin (the point where
+all three axes meet, typically at (0,0,0).</p>
+<div class="section level3">
+<h3 id="right-and-left-handed-coordinate-systems">Right and Left handed coordinate systems:<a class="anchor" aria-label="anchor" href="#right-and-left-handed-coordinate-systems"></a></h3>
 <p>Right-Handed Coordinate System: In a right-handed system, the thumb,
 index, and middle fingers of the right hand can be used to represent the
 X, Y, and Z axes, respectively:</p>
@@ -447,8 +457,10 @@ X, Y, and Z axes, respectively:</p>
 the direction of the Y-axis. Middle finger points in the direction of
 the Z-axis. If you curl your fingers from the X-axis toward the Y-axis,
 your thumb will point in the direction of the Z-axis.</p>
-<p>Left-Handed Coordinate System: This is the opposite configuration. In
-a left-handed system:</p>
+</div>
+<div class="section level3">
+<h3 id="left-handed-coordinate-system-this-is-the-opposite-configuration--in-a-left-handed-system">Left-Handed Coordinate System: This is the opposite configuration.
+In a left-handed system:<a class="anchor" aria-label="anchor" href="#left-handed-coordinate-system-this-is-the-opposite-configuration--in-a-left-handed-system"></a></h3>
 <p>Thumb points in the direction of the X-axis. Index finger points in
 the direction of the Y-axis. Middle finger points in the direction of
 the Z-axis, but it points in the opposite direction compared to the
@@ -473,7 +485,7 @@ object by the same vector (𝑑𝑥,𝑑𝑦,𝑑𝑧)</p>
 <p>[1 0 0 dx] [0 1 0 dy] [0 0 1 dz] [0 0 0 1]</p>
 <p>Where the object’s coordinates (𝑥,𝑦,𝑧) are multiplied by this matrix
 to shift the object by the desired amount.</p>
-<p>​Rotation: Rotating an object around one of the three axes (X, Y, or
+<p>Rotation: Rotating an object around one of the three axes (X, Y, or
 Z) by a certain angle. Rotations are typically represented using
 rotation matrices for each axis.</p>
 <p>Example: Rotation about the Z-axis by an angle 𝜃:</p>
@@ -499,12 +511,17 @@ coordinates, allowing for both rotation, scaling, and translation to be
 performed in a unified way. An affine transformation matrix typically
 looks like this:</p>
 <p>A = [a11 a12 a13 tx] [a21 a22 a23 ty] [a31 a32 a33 tz] [0 0 0 1 ]</p>
-<p>Where The upper-left 3×3 part of the matrix (coefficients 𝑎ij)
-handles rotation, scaling, and shearing. The last column [𝑡𝑥,𝑡𝑦,𝑡𝑧,1]
-represents the translation. The fourth row is to maintain the matrix
-format for homogeneous coordinates.</p>
-<p>How do they work? Affine transformations in 3D can be applied using
-matrix multiplication. To transform a point (𝑥,𝑦,z) we represent it in
+</div>
+<div class="section level3">
+<h3 id="where-the-upper-left-33-part-of-the-matrix-coefficients-𝑎ij-handles-rotation-scaling-and-shearing-">Where The upper-left 3×3 part of the matrix (coefficients 𝑎ij)
+handles rotation, scaling, and shearing.<a class="anchor" aria-label="anchor" href="#where-the-upper-left-33-part-of-the-matrix-coefficients-%F0%9D%91%8Eij-handles-rotation-scaling-and-shearing-"></a></h3>
+<p>The last column [𝑡𝑥,𝑡𝑦,𝑡𝑧,1] represents the translation. The fourth
+row is to maintain the matrix format for homogeneous coordinates.</p>
+</div>
+<div class="section level3">
+<h3 id="how-do-they-work">How do they work?<a class="anchor" aria-label="anchor" href="#how-do-they-work"></a></h3>
+<p>Affine transformations in 3D can be applied using matrix
+multiplication. To transform a point (𝑥,𝑦,z) we represent it in
 homogeneous coordinates as [x,y,z,1] where the extra 1 allows for
 translation to be included in the matrix.</p>
 <p>First, we would need to apply transformation, rotation and scaling as
@@ -514,7 +531,9 @@ Matrix M = Translation Matrix * Rotation Matrix * Scaling Matrix.</p>
 combined scaling, rotation, and translation. Once calculated, it can be
 used to transform any point in space by multiplying it by the vector
 [x,y,z,1].</p>
-<p>Conclusion:</p>
+</div>
+<div class="section level3">
+<h3 id="conclusion">Conclusion:<a class="anchor" aria-label="anchor" href="#conclusion"></a></h3>
 <p>3D coordinate systems are based on X, Y, and Z axes, with
 right-handed and left-handed variants. Object transformations, include
 translation, rotation, and scaling. An affine transformation combines
@@ -526,9 +545,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
 </div>
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/polygonal-meshes.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/cameras.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
