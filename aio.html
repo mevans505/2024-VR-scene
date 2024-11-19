@@ -739,7 +739,7 @@ dimensions:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To describe a 3D cube, the file will contain data describing the 6
 squares using point coordinates (e.g. (1,0,0)).</p>
@@ -770,7 +770,7 @@ the squares of the grid to draw your 3-dimensional box.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You have just experienced the concept of
 <strong>Rasterisation</strong>.</p>
@@ -2130,9 +2130,10 @@ any links that you are not going to use.
 <ul>
 <li>What are the basic types and parameters of lighting in a VR
 environment?</li>
-<li>How can good quality lighting effects (e.g. shadows) be
-achieved?</li>
-<li>How do lighting affect performance of the environment?</li>
+<li>How can good quality lighting effects (e.g. shadows) be achieved?
+Shadows in our engine are quite easy to achieve, simply requiring us to
+tick to have shadows remain on.</li>
+<li>How do(es) lighting affect performance of the environment?</li>
 </ul>
 </div>
 </div>
@@ -2142,10 +2143,46 @@ achieved?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Explain the basics of lighting in VR environments</li>
-<li>Demonstrate the implementation of basic lighting</li>
-<li>Explore how to create good lighting including shadows</li>
+<li><p>Explain the basics of lighting in VR environments In unreal
+engine, lighting is determined via lights, with a few different forms.
+Firstly Directional Lights, which provide an even lighting to every
+object in the world, so that things do not become impossible to see,
+acting like sun or moon light. Secondly, point lights. These lights shed
+light and create shadows, only within the radius of the light, similar
+to a light bulb. Thirdly, spot lights. These shed light in a beam in the
+direction they are pointed, similar to a torch, or a … spotlight.
+Fourthly, there are rect lights. These lights are similar to spotlights
+in that they are directional, but rather than being a narrow circular
+beam, sheds light evenly in one full direction, and sheds no light in
+the other. Lastly there is the sky light. This captures distant parts of
+the scene as a light, allowing for reflections from far away
+objects.</p></li>
+<li><p>Demonstrate the implementation of basic lighting</p></li>
 </ul>
+<p>Lighting in our engine is split into 3 categories. Static lighting,
+which is built into the level, “staining” the nearby objects with the
+lights and shadows, stationary, which is similar to static but can have
+the colour of the light and its intensity changed in game, affecting the
+precalculated areas accordingly ,and Moveable light, which affects
+performance the most, as it is calculated constantly.</p>
+<p>Image depicted is an image of the unreal engine UI, showing options
+for moving lighting, along with increasing lighting intensity and
+changing colour</p>
+<p>Image depicted is an image of a roofed room with no walls, a single
+cube being lit by a white light, leaving a slight shadow</p>
+<p>Its as simple as dragging the lights into the scene!</p>
+<ul>
+<li>Explore how to create good lighting including shadows As mentioned
+before, shadows are mostly done automatically.</li>
+</ul>
+<p>Image depicted is a tall blue cuboid, lit by two lights, a regular
+white light, and a blue light. Both lights leave shadows on the floor
+beyond the cuboid.</p>
+<p>If we place multiple lights, and allow multiple colours and shadows,
+we can even make effects like this!</p>
+<p>P.S: if the images arent working and you care to see them, this page
+was initially made in a google doc before being moved to the github,
+which you can see here: <a href="https://docs.google.com/document/d/17qecks9vGGlSdth5WDNPVyfNEDSwsjC8U8vOUxU4Rvg/edit?usp=sharing" class="external-link uri">https://docs.google.com/document/d/17qecks9vGGlSdth5WDNPVyfNEDSwsjC8U8vOUxU4Rvg/edit?usp=sharing</a></p>
 </div>
 </div>
 </div>
