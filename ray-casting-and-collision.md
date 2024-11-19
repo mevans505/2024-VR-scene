@@ -4,6 +4,8 @@ teaching: 30
 exercises: 10
 ---
 
+### Group 7: Mathews Daniel, Carroll Joseph, Layne Sky
+
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What are the basics of ray casting?

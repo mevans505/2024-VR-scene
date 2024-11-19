@@ -4,6 +4,8 @@ teaching: 30
 exercises: 10
 ---
 
+### Group 4: Reid Abbie, Crane Alan, Wood Alexander, Blackburn Ben
+
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What is a camera in a 3D scene?

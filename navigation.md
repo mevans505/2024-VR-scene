@@ -4,6 +4,9 @@ teaching: 30
 exercises: 10
 ---
 
+
+### Group 6: Gray Jay, Sovine Kennedy, Waterer Tegan
+
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - How can users navigate efficiently in a VR environment?
