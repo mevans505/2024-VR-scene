@@ -66,10 +66,10 @@ episodes:
 - polygonal-meshes.Rmd # Group 1
 - coordinate-systems.Rmd # Group 2
 - cameras.Rmd # Group 4
-- controllers.Rmd # Group 5
+- controllers.Rmd # Group 8
 - navigation.Rmd  # Group 9
 - ray-casting-and-collision.Rmd  # Group 7
-- lighting.Rmd  # Group 8
+- lighting.Rmd  # Group 5
 - animations.Rmd
 - shaders.Rmd  # Group 10
 - particle-effects.Rmd  # Group 11
