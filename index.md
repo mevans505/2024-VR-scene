@@ -2,16 +2,23 @@
 site: sandpaper::sandpaper_site
 ---
 
-![&copy; 2rogan from AdobeStock](episodes/fig/AdobeStock_839562943.jpeg){alt="logo media"}
+![&copy; Business Pics from AdobeStock](episodes/fig/AdobeStock_839562943.jpeg){alt="logo media"}
 
-This resource offers a starting point to learn more about the technologies
-which allow sensing data from environments. Although it focuses mostly on sensing spatial data,
-it also covers other sensing technologies within the Internet of Things (IoT) context.
+This resource offers a starting point to learn more about the elements of a 3D scene, including introductory knowledge on multidimensional media, as well as managing media in a way which promotes the FAIR principles.
 
+The developing resources will cover issues such as:
+
+- Polygonal meshes 
+- Coordinate systems and transformations (basics of rotation/translation and scaling)
+- Cameras
+- Controllers
+- Navigation/teleportation
+- Lighting
+- Ray casting and collision detection
+- Shaders
 
 By the end of this session you are expected to be able to:
 
-- Understand the underpinning concepts related to sensing spatial data from environments through processes
-such as photogrammetry.
-- Generate 3D models via photogrammetry processes.
-- Understand the basics of sensing in VR headsets.
+- Define the different types of multidimensional media.
+- Understand the basics of 3D scenes,
+and how to access information on their implementation on a Game Engine or 3D library.
