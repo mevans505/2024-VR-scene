@@ -4,7 +4,6 @@ teaching: 10
 exercises: 2
 ---
 
-### Group 9: Annuario Alessandro, Ermidis Harry
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What is an animation?
