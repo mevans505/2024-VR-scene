@@ -4,6 +4,7 @@ teaching: 30
 exercises: 10
 ---
 
+### Group 8: Ali Humza, Collins Jonny, Hamilton Shanahan Lukas, Bober Maks
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What are the basic types and parameters of lighting in a VR environment?

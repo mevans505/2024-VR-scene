@@ -4,6 +4,9 @@ teaching: 10
 exercises: 2
 ---
 
+
+### Group 2: Crook Cameron, Parmenter Daniel
+
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What are the basis of coordinate systems in 3D?
@@ -22,4 +25,3 @@ coordinate systems.
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-## Coordinate System

@@ -1,8 +1,10 @@
 ---
 title: 'Controllers'
-teaching: 10
-exercises: 2
+teaching: 30
+exercises: 10
 ---
+
+### Group 5: Cerrudo Carlos, Duke Harry, Parker Luk, Taylor Tom
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
