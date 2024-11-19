@@ -32,7 +32,6 @@ The perspective is defined by the camera's:
     - Field of View
       - How wide the camera's view is, how much of the scene is visible from this perspective
 
-
 ##Explain what types of cameras there are in Game Engine and their typical parameters
 
 ##First Person
@@ -71,10 +70,18 @@ A camera is created differently in each engine, but all are as simple as drag an
 
 ### Unity
 ```txt
-In the editor you right left click on the hierarchy of the environment and then in the drop-down menu click camera which will create a new camera in the environment
+In the editor you right left click on the hierarchy of the environment and then in the drop-down menu click camera which will create a new camera in the environment.
 ```
 
 ### Unreal Engine
 ```txt
 In the editor you click on window followed by place anchors then all classes and then to place a camera you drag the camera anchor into the environment where you want it
 ```
+
+## Code Examples
+
+https://youtu.be/DXri5QRC3HU?feature=shared
+
+https://youtu.be/xvyrzwwU1DE?feature=shared
+
+https://youtu.be/OIxjcScxwaw?feature=shared
