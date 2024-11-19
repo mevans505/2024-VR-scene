@@ -3,8 +3,9 @@ title: 'Controllers'
 teaching: 30
 exercises: 10
 ---
+ 
+### Group 8: Ali Humza, Collins Jonny, Hamilton Shanahan Lukas, Bober Maks
 
-### Group 5: Cerrudo Carlos, Duke Harry, Parker Luk, Taylor Tom
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
