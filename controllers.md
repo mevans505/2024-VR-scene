@@ -11,7 +11,9 @@ History of VR controllers
 **The Sensorama**
 
 The Sensorama was developed in 1962 by Morton Heilig was one of the first example of a virtual reality experiences. Unlike the compact virtual reality headsets of today The Sensorama lacked any controllers.
-[The Sensorama](fig/Controllers.png)
+
+![The Sensorama](fig/Controllers.png){alt="sensorama"}
+
 source: <https://www.researchgate.net/figure/Horton-Heiligs-concept-The-Sensorama-Sensorama-simulator-1962_fig9_333855439>
 
 During the early period of virtual reality there was no standardised control input as virtual reality was not available to the general public most virtual reality research during this time was done by NASA and the U.S military.
@@ -19,7 +21,9 @@ During the early period of virtual reality there was no standardised control inp
 **Sayre Glove (1977)**
 
 This was one of the earliest implementations of glove-based input for VR. It used flexible tubes filled with light to detect the user’s fingers bending. This glove based input was extremely important as it set the precedent for the main virtual reality control input for the following years to come.
-[Sayre Glove](fig/Controllers2.jpg)
+
+![Sayre Glove](fig/Controllers2.jpg)
+
 **The Power Glove (1989)**
 
 The power glove was one of the first commercial virtual reality control inputs; despite being officially licensed by Nintendo for the Nintendo Entertainment System (NES), Nintendo was not involved in the design or release of the accessory. Rather, it was designed by Samuel Cooper Davis for Abrams/Gentile Entertainment (AGE)
