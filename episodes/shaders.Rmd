@@ -4,6 +4,8 @@ teaching: 30
 exercises: 10
 ---
 
+### Group 10: Jenkins Conor, Smyth James, Augustin Jevon
+
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What are shaders in VR environments?

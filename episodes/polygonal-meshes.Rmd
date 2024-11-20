@@ -4,7 +4,11 @@ teaching: 30
 exercises: 10
 ---
 
+### Group 1: White Eddie, Long Joshua, Reginold Stan, Patel Yash
+
 :::::::::::::::::::::::::::::::::::::: questions 
+
+
 
 - What is a polygonal mesh?
 - What are the elements of a polygonal mesh, including textures and materials?
@@ -18,4 +22,5 @@ exercises: 10
 - Demonstrate how to incorporate various types/sizes of polygonal meshes into a VR environment.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
 
