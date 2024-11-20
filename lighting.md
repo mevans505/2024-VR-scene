@@ -36,7 +36,9 @@ Fourthly, there are *Rect Lights*. These lights are similar to spotlights in tha
 
 Lastly there is the *Sky Light*. This captures distant parts of the scene as a light, allowing for reflections from far away objects.
 
-You also need to consider the method and rendering of light sources. Baked, Dynamic or Hybrid methods have pro’s and con’s to each. For VR games, processing and load is a big concern to ensure the hardware of devices can run the application. Generally speaking, Baked is fast and stable, whereas Dynamic is a heavier load when rendering. Baked lighting may produce more flat and static results whereas Dynamic is more realistic, you may also consider a Hybrid between the two.
+You also need to consider the method and rendering of light sources. Baked (also called static), Dynamic or Hybrid methods have pro’s and con’s to each. For VR games, processing and load is a big concern to ensure the hardware of devices can run the application. Generally speaking, Baked is fast and stable, whereas Dynamic is a heavier load when rendering. Baked lighting may produce more flat and static results whereas Dynamic is more realistic, you may also consider a Hybrid between the two.
+
+https://developer.unigine.com/docs/future/learn/05_cameras_and_lighting/2_2
 
 
 ## Demonstrate the implementation of basic lighting
