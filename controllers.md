@@ -31,11 +31,15 @@ The power glove was one of the first commercial virtual reality control inputs; 
 Source: <https://en.wikipedia.org/wiki/Power_Glove#:~:text=The%20Power%20Glove%20was%20originally,States%20and%20PAX%20in%20Japan>.
 
 The Power Glove took a lot of inspiration from previous glove-based designs notably the VPL Research Dataglove and built upon them. Though rudimentary, it introduced gesture-based input and gained a cult following.
+
 ![The VLP Research Dataglove](fig/Controllers3.jpg){alt="DataGlove"}
+
 The VPL Research Dataglove.
 
 Source: <https://www.google.com/url?sa=i&url=https%3A%2F%2Fencyclo-technes.org%2Fen%2Fbase%2F60195x%2F4998&psig=AOvVaw0YcUVlRZBcqqz2xyEA1yv-&ust=1732141180114000&source=images&cd=vfe&opi=89978449&ved=0CBcQjhxqFwoTCLCJ2O-26YkDFQAAAAAdAAAAABAQ>
-¬[The Power Glove](fig/Controllers4.jpg){alt="PowerGlove"}
+
+![The Power Glove](fig/Controllers4.jpg){alt="PowerGlove"}
+
 The Power Glove
 
 Originally released for $75 ($184 in 2023)
@@ -43,23 +47,31 @@ Originally released for $75 ($184 in 2023)
 **Sony EyeToy (2003)**
 
 Though not a traditional controller the EyeToy was a camera for the PlayStation 2 that allowed for gesture-based interactions by tacking body movements.
+
 ![Sony EyeToy](fig/Controllers5.jpg){alt=EyeToy"}
+
 **Nintendo Wii Controller (2006)**
 
 The Wii remote popularized motion-controlled gaming with its gyroscopic sensors and accelerometers. While the Wii remote was designed for traditional console gaming the Wii remote demonstrated how motion tracking enhance immersion and laid the groundwork for similar concepts in VR.
 
 Additionally, the Wii resulted in its competitors; PlayStation and Xbox releasing their own virtual reality controllers to compete with the Wii. Gaming technologies such as that of the Nintendo Wii are considered as non-immersive VR applications.
+
 ![Wii Remote](fig/Controllers6.jpg){alt="WiiRemote"}
+
 **The Playstation Move (2010)**
 
 This was Sony’s answer to the Wii remote, originally for the PlayStation 3, these controllers introduced motion tracking with a glowing orb for spatial positioning. This controller functioned very similarly to the Wii remote. Later during its lifecycle the PS move was the controller used for the PSVR Sony’s own virtual reality headset.
+
 ![Playstation Move](fig/Controllers7.jpg){alt="PSMove"}
+
 **Microsoft Xbox Kinect (2010)**
 
 The Kinect used an RGB camera, an infrared (IR) depth sensor, and a multi-array microphone to track a user’s body in 3D space. It was very different when compared to its competition. Users interacted without holding any physical controller, relying solely on gestures and voice commands. Integrated voice recognition allowed users to control games and apps through spoken commands, an innovation later adopted by VR systems like Meta Quest.
 
 Kinect laid the groundwork for later hand-tracking systems, proving that controller-free input was feasible for interacting with digital environments.
+
 ![Xbox Kinect](fig/Controllers8.jpg){alt="Kinect"}
+
 **Modern VR controllers**
 
 **Oculus Rift DK1/DK2 (2012-2014)**
@@ -70,7 +82,9 @@ These were the first headsets made by the virtual reality titan that is Oculus w
 **HTC Vive (2016)**
 
 Introduced wand-like controllers with precise motion tracking and buttons for interactions. This was the first commercial headset with sensor-based tracking which allowed the users to move freely in space.
+
 ![HTC Vive](fig/Controllers11.jpg){alt="vive"}
+
 Source: <https://virtualspeech.com/blog/history-of-vr>
 
 **Oculus Touch controllers (2016)**
@@ -80,15 +94,21 @@ The oculus touch was a controller released in December 6<sup>th</sup> 2016 for t
 **Knuckles (Valve Index) 2019**
 
 These knuckles for the valve index feature advanced tracking and can detect individual fingers currently touching the controller this allowed gripping objects to simulated in VR. Users could also release the controller completely while gripping virtual objects to simulate throwing.
+
 ![Valve Index](fig/Controllers12.jpg){alt="Valve"}
+
 **Meta (Oculus) Quest Controllers**
 
 Quest series controllers refined tracking and comfort.
 
 Quest 2 (2020) also introduced hand tracking without controllers.
+
 ![Quest 2](fig/Controllers13.jpg){alt="Quest2"}
+
 **PSVR2 Controllers (2023)**
+
 ![PSVR2 Controllers](fig/Controllers14.jpg){alt="PSVR"}
+
 Unlike its predecessor that used the PlayStation move controllers the PlayStation VR2 Sense controllers (2023) incorporated adaptive triggers and haptic feedback for enhanced immersion. They also used the ring design used in modern day VR controllers that contain IR emitting LEDs to track the position of the controller using the cameras in the headset. This also means unlike the original PSVR a separate camera isn’t required to accurately track the controller.
 
 What are the typical parameters of VR controllers?
@@ -164,9 +184,14 @@ Interaction with and modification of virtual objects in 3D environments using ha
 **Sample code**
 
 Due to OpenXR’s integration into unity, creating manipulation of objects in VR can be made very easy. Most simple interactions can be achieved using OpenXR presets. For example teleportation anchors can be created using the TeleportationAnchor component.
+
 ![TeleportationAnchor Component](fig/Controllers15.png){alt="TeleportationAnchor"}
+
 There is also the XRGrabInteractable component. This can be used to configure objects that can be picked up and put down using the controllers. Both of these components lend themselves to customization very well. For example the programmer can invoke public events in scripts from any GameObjects on any interaction event.
+
 ![Example Script](fig/Controllers16.png){alt="ExampleScript"}
+
 ![Method called through XRGrabInteractable Component](fig/Controllers17.png){alt="Calling The Script"}
+
 
 This allows for quick prototyping and allows for simple projects to be created quickly. While also allowing more complex solutions to be developed.
