@@ -739,7 +739,7 @@ dimensions:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To describe a 3D cube, the file will contain data describing the 6
 squares using point coordinates (e.g. (1,0,0)).</p>
@@ -770,7 +770,7 @@ the squares of the grid to draw your 3-dimensional box.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You have just experienced the concept of
 <strong>Rasterisation</strong>.</p>
@@ -1766,10 +1766,13 @@ mesh</div>
 </figure><figure><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/629730/ss_5d241a6573de42453029c4dbb06130e7d69734bc.600x338.jpg?t=1724242459" alt="image" class="figure mx-auto d-block"><div class="figcaption">Example 4</div>
 </figure><figure><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/448280/ss_ff7151cab14752f2b6501c31c3c79235b79cc45a.600x338.jpg?t=1710217876" alt="image" class="figure mx-auto d-block"><div class="figcaption">Example 5</div>
 </figure><figure><img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/617830/ss_a1bdd0d675730f3902626c08253355b11b01c59a.600x338.jpg?t=1726509081" alt="image" class="figure mx-auto d-block"><div class="figcaption">Example 6</div>
-</figure><!--
+</figure><iframe src="https://unibrightonac-my.sharepoint.com/personal/j_long11_uni_brighton_ac_uk/_layouts/15/embed.aspx?UniqueId=cd3f31d0-81a5-486a-a934-61818b013bc0&amp;embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&amp;referrer=StreamWebApp&amp;referrerScenario=EmbedDialog.Create" width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen title="VR Polygon Meshes Demo.mp4">
+</iframe>
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></section></section><section id="aio-coordinate-systems"><p>Content from <a href="coordinate-systems.html">Coordinate Systems and Transformations</a></p>
+ -->
+</section></section><section id="aio-coordinate-systems"><p>Content from <a href="coordinate-systems.html">Coordinate Systems and Transformations</a></p>
 <hr>
 <p>Last updated on 2024-11-20 |
 
@@ -2069,17 +2072,29 @@ typical parameters</li>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="what-is-a-camera-in-a-3d-scene">What is a camera in a 3D scene?<a class="anchor" aria-label="anchor" href="#what-is-a-camera-in-a-3d-scene"></a>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>A camera is essential to any game/3D scene, as they define what the
+user can see. There are lots of different types of cameras and there is
+no one type of that is best. Different scenarios need different cameras
+to give the best user experience.</p>
+</section><section><h2 class="section-heading" id="what-is-a-camera-in-a-3d-scene">What is a camera in a 3D scene?<a class="anchor" aria-label="anchor" href="#what-is-a-camera-in-a-3d-scene"></a>
 </h2>
 <hr class="half-width">
 <p>A camera in a 3D space is a perspective. It is a virtual viewpoint
 from which the scene is rendered. This perspective defines what is
 visible and how it is seen.</p>
-<p>The perspective is defined by the camera’s: - Position - Where the
-camera is situated within the 3d scene - Orientation - The direction the
-camera is facing - Field of View - How wide the camera’s view is, how
-much of the scene is visible from this perspective</p>
-</section><section><h2 class="section-heading" id="explain-what-types-of-cameras-there-are-in-game-engine-and-their-typical-parameters">Explain what types of cameras there are in Game Engine and their
+<p>The perspective is defined by the camera’s:<br>
+- Position , Where the camera is situated within the 3d scene<br>
+- Orientation , The direction the camera is facing<br>
+- Field of View , How wide the camera’s view is, how much of the scene
+is visible from this perspective</p>
+<figure><img src="fig/Unity_example_scene.png" alt="A screenshot of a VR scene on the Unity Editor." class="figure mx-auto d-block"><div class="figcaption">A screenshot of a VR scene on the Unity
+Editor.</div>
+</figure><figure><img src="fig/Unity_VR_Game_Example.png" alt="A screenshot of a VR game on the Unity Editor." class="figure mx-auto d-block"><div class="figcaption">A screenshot of a VR game on the Unity
+Editor.</div>
+</figure></section><section><h2 class="section-heading" id="explain-what-types-of-cameras-there-are-in-game-engine-and-their-typical-parameters">Explain what types of cameras there are in Game Engine and their
 typical parameters<a class="anchor" aria-label="anchor" href="#explain-what-types-of-cameras-there-are-in-game-engine-and-their-typical-parameters"></a>
 </h2>
 <hr class="half-width"></section><section><h2 class="section-heading" id="first-person">First Person<a class="anchor" aria-label="anchor" href="#first-person"></a>
@@ -2088,36 +2103,47 @@ typical parameters<a class="anchor" aria-label="anchor" href="#explain-what-type
 <p>A first-person camera gives the view from a character’s point of view
 and replicates human vision. This camera type is often used for FPS and
 action games.</p>
-<p>Parameters of first-person camera field of view (FOV) = How large the
-camera’s peripheral vision is. Camera sway and head bobbing = to
-simulate head movements when walking. Camera Shake = used to show
-vibrations from nearby events such as explosions. Motion blur - used to
-simulate blur experienced by the eyes during fast movement</p>
+<p>Parameters of first-person camera:<br>
+- field of view (FOV) = How large the camera’s peripheral vision
+is.<br>
+- Camera sway and head bobbing = to simulate head movements when
+walking.<br>
+- Camera Shake = used to show vibrations from nearby events such as
+explosions.<br>
+- Motion blur - used to simulate blur experienced by the eyes during
+fast movement</p>
 </section><section><h2 class="section-heading" id="third-person">Third Person<a class="anchor" aria-label="anchor" href="#third-person"></a>
 </h2>
 <hr class="half-width">
 <p>A third-person view is taken from behind and slightly above the
 player’s character. This camera type is often used within action and
 role-playing games.</p>
-<p>Parameters of a third-person camera - distance of the following
-camera from the character - the angle of the camera position - collision
-detection to ensure the camera navigates within the environment
-correctly</p>
+<p>Parameters of a third-person camera<br>
+- distance of the following camera from the character<br>
+- the angle of the camera position<br>
+- collision detection to ensure the camera navigates within the
+environment correctly</p>
 </section><section><h2 class="section-heading" id="top-down">Top Down<a class="anchor" aria-label="anchor" href="#top-down"></a>
 </h2>
 <hr class="half-width">
-<p>A top-down view gives an aerial view of the character’s position.
-camera rotation the angle of the camera position camera movement = move
-with character or static</p>
+<p>A top-down view gives an aerial view of the character’s
+position.<br>
+- camera rotation<br>
+- the angle of the camera position<br>
+- camera movement = move with character or static</p>
 </section><section><h2 class="section-heading" id="side-scrolling-camera">Side Scrolling Camera<a class="anchor" aria-label="anchor" href="#side-scrolling-camera"></a>
 </h2>
 <hr class="half-width">
 <p>provides the user with a side-on angle of a 2d plane; this camera
 type is used in platformer games, such as Mario.</p>
-<p>Camera following direction = Does the camera scroll vertically or
-horizontally Camera Movement = move with characters’ position or static
-Camera bounds = where the camera can/cannot move</p>
-</section><section><h2 class="section-heading" id="how-to-create-cameras-for-vr-and-non-vr-environments">How to create cameras for VR and non-VR environments<a class="anchor" aria-label="anchor" href="#how-to-create-cameras-for-vr-and-non-vr-environments"></a>
+<ul>
+<li>Camera following direction = Does the camera scroll vertically or
+horizontally<br>
+</li>
+<li>Camera Movement = move with characters’ position or static<br>
+</li>
+<li>Camera bounds = where the camera can/cannot move</li>
+</ul></section><section><h2 class="section-heading" id="how-to-create-cameras-for-vr-and-non-vr-environments">How to create cameras for VR and non-VR environments<a class="anchor" aria-label="anchor" href="#how-to-create-cameras-for-vr-and-non-vr-environments"></a>
 </h2>
 <hr class="half-width">
 <p>A camera is created differently in each engine, but all are as simple
@@ -2125,20 +2151,22 @@ as drag and dropping them into the environment</p>
 <div class="section level3">
 <h3 id="unity">Unity<a class="anchor" aria-label="anchor" href="#unity"></a>
 </h3>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">TXT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode txt" tabindex="0"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>In the editor you right left click on the hierarchy of the environment and then in the drop-down menu click camera which will create a new camera in the environment.</span></code></pre>
-</div>
+<ul>
+<li>Right left click on the hierarchy of the environment</li>
+<li>In the drop-down menu click camera which will create a new camera in
+the environment.</li>
+</ul>
 </div>
 <div class="section level3">
 <h3 id="unreal-engine">Unreal Engine<a class="anchor" aria-label="anchor" href="#unreal-engine"></a>
 </h3>
-<div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">TXT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode txt" tabindex="0"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>In the editor you click on window followed by place anchors then all classes and then to place a camera you drag the camera anchor into the environment where you want it</span></code></pre>
-</div>
+<ul>
+<li>Click on window</li>
+<li>Followed by place anchors</li>
+<li>All classes</li>
+<li>Then to place a camera you drag the camera anchor into the
+environment where you want it</li>
+</ul>
 </div>
 </section><section><h2 class="section-heading" id="code-examples">Code Examples<a class="anchor" aria-label="anchor" href="#code-examples"></a>
 </h2>
@@ -2146,6 +2174,10 @@ as drag and dropping them into the environment</p>
 <p><a href="https://youtu.be/DXri5QRC3HU?feature=shared" class="external-link uri">https://youtu.be/DXri5QRC3HU?feature=shared</a></p>
 <p><a href="https://youtu.be/xvyrzwwU1DE?feature=shared" class="external-link uri">https://youtu.be/xvyrzwwU1DE?feature=shared</a></p>
 <p><a href="https://youtu.be/OIxjcScxwaw?feature=shared" class="external-link uri">https://youtu.be/OIxjcScxwaw?feature=shared</a></p>
+</section><section><h2 class="section-heading" id="unity-learn">Unity Learn<a class="anchor" aria-label="anchor" href="#unity-learn"></a>
+</h2>
+<hr class="half-width">
+<p><a href="https://learn.unity.com/tutorial/working-with-unity-cameras-questions#" class="external-link uri">https://learn.unity.com/tutorial/working-with-unity-cameras-questions#</a></p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
