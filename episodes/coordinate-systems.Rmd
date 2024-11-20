@@ -28,6 +28,7 @@ coordinate systems.
 ## What are Coordinate Systems in 3D?
 A 3D coordinate system is a mathematical framework used to describe the position of points, lines, and objects in three-dimensional space. The system is defined by three perpendicular axes, typically labeled X, Y, and Z. Each point in space is described by a set of three coordinates (𝑥,𝑦,𝑧) which represent its distance from the origin (the point where all three axes meet, typically at (0,0,0).
 
+![Banner](/fig/unity-coordinate-system-banner.jpg)
 
 ### Right and Left handed coordinate systems:
 
@@ -38,12 +39,16 @@ Index finger points in the direction of the Y-axis.
 Middle finger points in the direction of the Z-axis.
 If you curl your fingers from the X-axis toward the Y-axis, your thumb will point in the direction of the Z-axis.
 
-### Left-Handed Coordinate System: This is the opposite configuration. In a left-handed system:
+### Left-Handed Coordinate System: This is the opposite configuration. 
+
+In a left-handed system:
 
 Thumb points in the direction of the X-axis.
 Index finger points in the direction of the Y-axis.
 Middle finger points in the direction of the Z-axis, but it points in the opposite direction compared to the right-handed system.
 The main difference between these systems lies in the direction of the Z-axis, which affects how certain operations, such as rotations, behave.
+
+![leftandRight](/fig/unity-axis-left-vs-right-handed.JPEG)
 
 Both coordinate systems are used depending on the context. For example, 3D graphics in computer graphics often use a right-handed system, while some other engineering applications may use a left-handed system.
 
@@ -102,6 +107,8 @@ A =
 The last column [𝑡𝑥,𝑡𝑦,𝑡𝑧,1] represents the translation.
 The fourth row is to maintain the matrix format for homogeneous coordinates.
 
+![Transforms](/fig/unity-transform-values.jpeg)
+
 ### How do they work?
 Affine transformations in 3D can be applied using matrix multiplication. To transform a point (𝑥,𝑦,z) we represent it in homogeneous coordinates as [x,y,z,1] where the extra 1 allows for translation to be included in the matrix.
 
@@ -116,9 +123,81 @@ Object transformations, include translation, rotation, and scaling.
 An affine transformation combines linear transformations and translations and can be represented using a 4x4 matrix.
 Matrix multiplication allows us to efficiently apply multiple transformations in sequence.
 
+### Example Code
+
+```
+using UnityEngine;
+
+public class CoordinateSystemDemo : MonoBehaviour
+{
+    public Transform targetObject;  // The object we want to transform
+    private Vector3 initialPosition;
+    private Vector3 initialScale;
+    private Quaternion initialRotation;
+
+    void Start()
+    {
+        // Store the initial transformation values of the object
+        initialPosition = targetObject.position;
+        initialScale = targetObject.localScale;
+        initialRotation = targetObject.rotation;
+
+        // Example translations, rotations and scaling using Unity's Transform
+        PerformTransformations();
+    }
+
+    void PerformTransformations()
+    {
+        // 1. Translation using Transform
+        Vector3 translation = new Vector3(3, 0, 0); // Move 3 units along the X-axis
+        targetObject.Translate(translation);
+
+        // 2. Rotation using Transform
+        Quaternion rotation = Quaternion.Euler(0, 45, 0); // Rotate 45 degrees around the Y-axis
+        targetObject.Rotate(rotation.eulerAngles);
+
+        // 3. Scaling using Transform
+        Vector3 scale = new Vector3(2, 2, 2); // Double the size of the object
+        targetObject.localScale = Vector3.Scale(targetObject.localScale, scale);
+
+        // Log final transformation
+        Debug.Log("Position: " + targetObject.position + ", Rotation: " + targetObject.rotation.eulerAngles + ", Scale: " + targetObject.localScale);
+    }
+
+    void Update()
+    {
+        // Affine transformations using matrices in Unity
+        if (Input.GetKeyDown(KeyCode.Space))        
+            ApplyAffineTransformation();     
+    }
+
+    void ApplyAffineTransformation()
+    {
+        // Create a translation matrix
+        Matrix4x4 translationMatrix = Matrix4x4.Translate(new Vector3(5, 0, 0)); // Move 5 units along X
+
+        // Create a rotation matrix (rotate 45 degrees around the Y-axis)
+        Matrix4x4 rotationMatrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
+
+        // Create a scaling matrix (scale by 1.5 on all axes)
+        Matrix4x4 scalingMatrix = Matrix4x4.Scale(new Vector3(1.5f, 1.5f, 1.5f));
+
+        // Combine all transformations into a single affine matrix
+        Matrix4x4 affineMatrix = translationMatrix * rotationMatrix * scalingMatrix;
+
+        // Apply the affine matrix to the target object's position, rotation, and scale
+        targetObject.position = affineMatrix.MultiplyPoint3x4(initialPosition);
+        targetObject.rotation = Quaternion.LookRotation(affineMatrix.GetColumn(2), affineMatrix.GetColumn(1)); // Recreate rotation from the matrix
+        targetObject.localScale = new Vector3(affineMatrix.m00, affineMatrix.m11, affineMatrix.m22); // Extract scale from the matrix
+    }
+}
+```
+
 Sources:
 https://techarthub.com/a-guide-to-unitys-coordinate-system-with-practical-examples/ 
 https://docs.unity3d.com/6000.0/Documentation/Manual/QuaternionAndEulerRotationsInUnity.html
+
+
 
 
 
