@@ -28,6 +28,7 @@ coordinate systems.
 ## What are Coordinate Systems in 3D?
 A 3D coordinate system is a mathematical framework used to describe the position of points, lines, and objects in three-dimensional space. The system is defined by three perpendicular axes, typically labeled X, Y, and Z. Each point in space is described by a set of three coordinates (𝑥,𝑦,𝑧) which represent its distance from the origin (the point where all three axes meet, typically at (0,0,0).
 
+
 ### Right and Left handed coordinate systems:
 
 Right-Handed Coordinate System: In a right-handed system, the thumb, index, and middle fingers of the right hand can be used to represent the X, Y, and Z axes, respectively:
@@ -114,5 +115,10 @@ The matrix M would then represent This matrix M represents the combined scaling,
 Object transformations, include translation, rotation, and scaling.
 An affine transformation combines linear transformations and translations and can be represented using a 4x4 matrix.
 Matrix multiplication allows us to efficiently apply multiple transformations in sequence.
+
+Sources:
+https://techarthub.com/a-guide-to-unitys-coordinate-system-with-practical-examples/ 
+https://docs.unity3d.com/6000.0/Documentation/Manual/QuaternionAndEulerRotationsInUnity.html
+
 
 
