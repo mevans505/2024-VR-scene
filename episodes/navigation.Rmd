@@ -5,7 +5,7 @@ exercises: 10
 ---
 
 
-### Group 6: Gray Jay, Sovine Kennedy, Waterer Tegan
+### Group 9: Annuario Alessandro, Ermidis Harry
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
