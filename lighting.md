@@ -36,11 +36,16 @@ Fourthly, there are *Rect Lights*. These lights are similar to spotlights in tha
 
 Lastly there is the *Sky Light*. This captures distant parts of the scene as a light, allowing for reflections from far away objects.
 
+You also need to consider the method and rendering of light sources. Baked, Dynamic or Hybrid methods have pro’s and con’s to each. For VR games, processing and load is a big concern to ensure the hardware of devices can run the application. Generally speaking, Baked is fast and stable, whereas Dynamic is a heavier load when rendering. Baked lighting may produce more flat and static results whereas Dynamic is more realistic, you may also consider a Hybrid between the two.
+
+
 ## Demonstrate the implementation of basic lighting
 
 Lighting in our engine is split into 3 categories. 
 
 *Static* lighting, which is built into the level, **staining** the nearby objects with the lights and shadows, stationary, which is similar to static but can have the colour of the light and its intensity changed in game, affecting the precalculated areas accordingly, and *Moveable* light, which affects performance the most, as it is calculated constantly.
+
+
 
 ![Image depicted is an image of the unreal engine UI, showing options for moving lighting, along with increasing lighting intensity and changing colour](fig/lux.png){alt="lux"}
 
