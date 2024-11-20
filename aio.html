@@ -739,7 +739,7 @@ dimensions:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To describe a 3D cube, the file will contain data describing the 6
 squares using point coordinates (e.g. (1,0,0)).</p>
@@ -770,7 +770,7 @@ the squares of the grid to draw your 3-dimensional box.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You have just experienced the concept of
 <strong>Rasterisation</strong>.</p>
@@ -1821,7 +1821,8 @@ The system is defined by three perpendicular axes, typically labeled X,
 Y, and Z. Each point in space is described by a set of three coordinates
 (𝑥,𝑦,𝑧) which represent its distance from the origin (the point where
 all three axes meet, typically at (0,0,0).</p>
-<div class="section level3">
+<figure><img src="/fig/unity-coordinate-system-banner.jpg" alt="Banner" class="figure mx-auto d-block"><div class="figcaption">Banner</div>
+</figure><div class="section level3">
 <h3 id="right-and-left-handed-coordinate-systems">Right and Left handed coordinate systems:<a class="anchor" aria-label="anchor" href="#right-and-left-handed-coordinate-systems"></a>
 </h3>
 <p>Right-Handed Coordinate System: In a right-handed system, the thumb,
@@ -1833,16 +1834,18 @@ the Z-axis. If you curl your fingers from the X-axis toward the Y-axis,
 your thumb will point in the direction of the Z-axis.</p>
 </div>
 <div class="section level3">
-<h3 id="left-handed-coordinate-system-this-is-the-opposite-configuration--in-a-left-handed-system">Left-Handed Coordinate System: This is the opposite configuration.
-In a left-handed system:<a class="anchor" aria-label="anchor" href="#left-handed-coordinate-system-this-is-the-opposite-configuration--in-a-left-handed-system"></a>
+<h3 id="left-handed-coordinate-system-this-is-the-opposite-configuration-">Left-Handed Coordinate System: This is the opposite
+configuration.<a class="anchor" aria-label="anchor" href="#left-handed-coordinate-system-this-is-the-opposite-configuration-"></a>
 </h3>
+<p>In a left-handed system:</p>
 <p>Thumb points in the direction of the X-axis. Index finger points in
 the direction of the Y-axis. Middle finger points in the direction of
 the Z-axis, but it points in the opposite direction compared to the
 right-handed system. The main difference between these systems lies in
 the direction of the Z-axis, which affects how certain operations, such
 as rotations, behave.</p>
-<p>Both coordinate systems are used depending on the context. For
+<figure><img src="/fig/unity-axis-left-vs-right-handed.JPEG" alt="leftandRight" class="figure mx-auto d-block"><div class="figcaption">leftandRight</div>
+</figure><p>Both coordinate systems are used depending on the context. For
 example, 3D graphics in computer graphics often use a right-handed
 system, while some other engineering applications may use a left-handed
 system.</p>
@@ -1893,6 +1896,8 @@ handles rotation, scaling, and shearing.<a class="anchor" aria-label="anchor" hr
 </h3>
 <p>The last column [𝑡𝑥,𝑡𝑦,𝑡𝑧,1] represents the translation. The fourth
 row is to maintain the matrix format for homogeneous coordinates.</p>
+<figure><img src="/fig/unity-transform-values.jpeg" alt="Transforms" class="figure mx-auto d-block"><div class="figcaption">Transforms</div>
+</figure>
 </div>
 <div class="section level3">
 <h3 id="how-do-they-work">How do they work?<a class="anchor" aria-label="anchor" href="#how-do-they-work"></a>
@@ -1918,6 +1923,77 @@ translation, rotation, and scaling. An affine transformation combines
 linear transformations and translations and can be represented using a
 4x4 matrix. Matrix multiplication allows us to efficiently apply
 multiple transformations in sequence.</p>
+</div>
+<div class="section level3">
+<h3 id="example-code">Example Code<a class="anchor" aria-label="anchor" href="#example-code"></a>
+</h3>
+<pre><code>using UnityEngine;
+
+public class CoordinateSystemDemo : MonoBehaviour
+{
+    public Transform targetObject;  // The object we want to transform
+    private Vector3 initialPosition;
+    private Vector3 initialScale;
+    private Quaternion initialRotation;
+
+    void Start()
+    {
+        // Store the initial transformation values of the object
+        initialPosition = targetObject.position;
+        initialScale = targetObject.localScale;
+        initialRotation = targetObject.rotation;
+
+        // Example translations, rotations and scaling using Unity's Transform
+        PerformTransformations();
+    }
+
+    void PerformTransformations()
+    {
+        // 1. Translation using Transform
+        Vector3 translation = new Vector3(3, 0, 0); // Move 3 units along the X-axis
+        targetObject.Translate(translation);
+
+        // 2. Rotation using Transform
+        Quaternion rotation = Quaternion.Euler(0, 45, 0); // Rotate 45 degrees around the Y-axis
+        targetObject.Rotate(rotation.eulerAngles);
+
+        // 3. Scaling using Transform
+        Vector3 scale = new Vector3(2, 2, 2); // Double the size of the object
+        targetObject.localScale = Vector3.Scale(targetObject.localScale, scale);
+
+        // Log final transformation
+        Debug.Log("Position: " + targetObject.position + ", Rotation: " + targetObject.rotation.eulerAngles + ", Scale: " + targetObject.localScale);
+    }
+
+    void Update()
+    {
+        // Affine transformations using matrices in Unity
+        if (Input.GetKeyDown(KeyCode.Space))
+            ApplyAffineTransformation();
+    }
+
+    void ApplyAffineTransformation()
+    {
+        // Create a translation matrix
+        Matrix4x4 translationMatrix = Matrix4x4.Translate(new Vector3(5, 0, 0)); // Move 5 units along X
+
+        // Create a rotation matrix (rotate 45 degrees around the Y-axis)
+        Matrix4x4 rotationMatrix = Matrix4x4.Rotate(Quaternion.Euler(0, 45, 0));
+
+        // Create a scaling matrix (scale by 1.5 on all axes)
+        Matrix4x4 scalingMatrix = Matrix4x4.Scale(new Vector3(1.5f, 1.5f, 1.5f));
+
+        // Combine all transformations into a single affine matrix
+        Matrix4x4 affineMatrix = translationMatrix * rotationMatrix * scalingMatrix;
+
+        // Apply the affine matrix to the target object's position, rotation, and scale
+        targetObject.position = affineMatrix.MultiplyPoint3x4(initialPosition);
+        targetObject.rotation = Quaternion.LookRotation(affineMatrix.GetColumn(2), affineMatrix.GetColumn(1)); // Recreate rotation from the matrix
+        targetObject.localScale = new Vector3(affineMatrix.m00, affineMatrix.m11, affineMatrix.m22); // Extract scale from the matrix
+    }
+}</code></pre>
+<p>Sources: <a href="https://techarthub.com/a-guide-to-unitys-coordinate-system-with-practical-examples/" class="external-link uri">https://techarthub.com/a-guide-to-unitys-coordinate-system-with-practical-examples/</a>
+<a href="https://docs.unity3d.com/6000.0/Documentation/Manual/QuaternionAndEulerRotationsInUnity.html" class="external-link uri">https://docs.unity3d.com/6000.0/Documentation/Manual/QuaternionAndEulerRotationsInUnity.html</a></p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
