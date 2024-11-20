@@ -252,6 +252,8 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#what-are-coordinate-systems-in-3d">What are Coordinate Systems in 3D?</a></li>
+<li><a href="#transform-objects-in-the-coordinate-systems">Transform objects in the coordinate systems</a></li>
+<li><a href="#affine-transformation">Affine transformation</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -443,78 +445,93 @@ matrices.</li>
 </div>
 <section><h2 class="section-heading" id="what-are-coordinate-systems-in-3d">What are Coordinate Systems in 3D?<a class="anchor" aria-label="anchor" href="#what-are-coordinate-systems-in-3d"></a></h2>
 <hr class="half-width"><p>A 3D coordinate system is a mathematical framework used to describe
-the position of points, lines, and objects in three-dimensional space.
-The system is defined by three perpendicular axes, typically labeled X,
-Y, and Z. Each point in space is described by a set of three coordinates
-(𝑥,𝑦,𝑧) which represent its distance from the origin (the point where
-all three axes meet, typically at (0,0,0).</p>
+the position of points, lines, and objects in three-dimensional
+space.</p>
+<p>The system is defined by three perpendicular axes, typically labeled
+X, Y, and Z. Each point in space is described by a set of three
+coordinates (𝑥,𝑦,𝑧) which represent its distance from the origin (the
+point where all three axes meet, typically at (0,0,0).</p>
 <figure><img src="../fig/unity-coordinate-system-banner.jpg" alt="Banner" class="figure mx-auto d-block"><div class="figcaption">Banner</div>
 </figure><div class="section level3">
 <h3 id="right-and-left-handed-coordinate-systems">Right and Left handed coordinate systems:<a class="anchor" aria-label="anchor" href="#right-and-left-handed-coordinate-systems"></a></h3>
-<p>Right-Handed Coordinate System: In a right-handed system, the thumb,
-index, and middle fingers of the right hand can be used to represent the
-X, Y, and Z axes, respectively:</p>
-<p>Thumb points in the direction of the X-axis. Index finger points in
-the direction of the Y-axis. Middle finger points in the direction of
-the Z-axis. If you curl your fingers from the X-axis toward the Y-axis,
-your thumb will point in the direction of the Z-axis.</p>
+<figure><img src="../fig/unity-axis-left-vs-right-handed.JPEG" alt="left and right coordinate system" class="figure mx-auto d-block"><div class="figcaption">leftandRight</div>
+</figure></div>
+<div class="section level3">
+<h3 id="right-handed-coordinate-system">Right-Handed Coordinate System<a class="anchor" aria-label="anchor" href="#right-handed-coordinate-system"></a></h3>
+<p>In a right-handed system, the thumb, index, and middle fingers of the
+right hand can be used to represent the X, Y, and Z axes,
+respectively:</p>
+<ul><li>Thumb points in the direction of the X-axis.</li>
+<li>Index finger points in the direction of the Y-axis.</li>
+<li>Middle finger points in the direction of the Z-axis.</li>
+</ul><p>If you curl your fingers from the X-axis toward the Y-axis, your
+thumb will point in the direction of the Z-axis.</p>
 </div>
 <div class="section level3">
-<h3 id="left-handed-coordinate-system-this-is-the-opposite-configuration-">Left-Handed Coordinate System: This is the opposite
-configuration.<a class="anchor" aria-label="anchor" href="#left-handed-coordinate-system-this-is-the-opposite-configuration-"></a></h3>
+<h3 id="left-handed-coordinate-system">Left-Handed Coordinate System<a class="anchor" aria-label="anchor" href="#left-handed-coordinate-system"></a></h3>
+<p>This is the opposite configuration.</p>
 <p>In a left-handed system:</p>
-<p>Thumb points in the direction of the X-axis. Index finger points in
-the direction of the Y-axis. Middle finger points in the direction of
-the Z-axis, but it points in the opposite direction compared to the
-right-handed system. The main difference between these systems lies in
-the direction of the Z-axis, which affects how certain operations, such
-as rotations, behave.</p>
-<figure><img src="../fig/unity-axis-left-vs-right-handed.JPEG" alt="leftandRight" class="figure mx-auto d-block"><div class="figcaption">leftandRight</div>
-</figure><p>Both coordinate systems are used depending on the context. For
+<ul><li>Thumb points in the direction of the X-axis.</li>
+<li>Index finger points in the direction of the Y-axis.</li>
+<li>Middle finger points in the direction of the Z-axis, but it points
+in the opposite direction compared to the right-handed system.</li>
+</ul><p>The main difference between these systems lies in the direction of
+the Z-axis, which affects how certain operations, such as rotations,
+behave.</p>
+<p>Both coordinate systems are used depending on the context. For
 example, 3D graphics in computer graphics often use a right-handed
 system, while some other engineering applications may use a left-handed
 system.</p>
-<p>How do we transform objects in the coordinate systems?</p>
-<p>In 3D space, we can transform objects by changing their position,
+</div>
+</section><section><h2 class="section-heading" id="transform-objects-in-the-coordinate-systems">Transform objects in the coordinate systems<a class="anchor" aria-label="anchor" href="#transform-objects-in-the-coordinate-systems"></a></h2>
+<hr class="half-width"><p>In 3D space, we can transform objects by changing their position,
 orientation, and size. Common transformations include translation,
-rotation, and scaling. These transformations are typically represented
-using matrices, which allow us to apply the transformations efficiently
-using linear algebra.</p>
-<p>Translation: Moving an object from one position to another without
-changing its orientation or size. A translation shifts all points of the
-object by the same vector (𝑑𝑥,𝑑𝑦,𝑑𝑧)</p>
+rotation, and scaling.</p>
+<p>These transformations are typically represented using matrices, which
+allow us to apply the transformations efficiently using linear
+algebra.</p>
+<div class="section level3">
+<h3 id="translation">Translation<a class="anchor" aria-label="anchor" href="#translation"></a></h3>
+<p>Moving an object from one position to another without changing its
+orientation or size. A translation shifts all points of the object by
+the same vector (𝑑𝑥,𝑑𝑦,𝑑𝑧)</p>
 <p>Translation matrix (in homogeneous coordinates):</p>
 <p>𝑇(𝑑𝑥,𝑑𝑦,𝑑𝑧) =</p>
 <p>[1 0 0 dx] [0 1 0 dy] [0 0 1 dz] [0 0 0 1]</p>
 <p>Where the object’s coordinates (𝑥,𝑦,𝑧) are multiplied by this matrix
 to shift the object by the desired amount.</p>
-<p>Rotation: Rotating an object around one of the three axes (X, Y, or
-Z) by a certain angle. Rotations are typically represented using
-rotation matrices for each axis.</p>
+</div>
+<div class="section level3">
+<h3 id="rotation">Rotation<a class="anchor" aria-label="anchor" href="#rotation"></a></h3>
+<p>Rotating an object around one of the three axes (X, Y, or Z) by a
+certain angle. Rotations are typically represented using rotation
+matrices for each axis.</p>
 <p>Example: Rotation about the Z-axis by an angle 𝜃:</p>
 <p>[cos𝜃 -sin𝜃 0 0] [sin𝜃 cos𝜃 0 0] [0 0 1 0 ] [0 0 0 1 ]</p>
-<p>Scaling: Changing the size of an object by multiplying its
-coordinates by a scale factor. Uniform scaling enlarges or shrinks the
-object equally in all directions, while non-uniform scaling can distort
-the object.</p>
+</div>
+<div class="section level3">
+<h3 id="scaling">Scaling<a class="anchor" aria-label="anchor" href="#scaling"></a></h3>
+<p>Changing the size of an object by multiplying its coordinates by a
+scale factor. Uniform scaling enlarges or shrinks the object equally in
+all directions, while non-uniform scaling can distort the object.</p>
 <p>Scaling matrix:</p>
 <p>Where Sx, Sy and Sz are the scaling factors along the X, Y and Z axis
 :</p>
 <p>S(sx, sy, sz) [sx 0 0 0] [0 sy 0 0] [0 0 sz 0] [0 0 0 1]</p>
-<p>What is an affine transformation?</p>
-<p>An affine transformation is a type of transformation that preserves
+</div>
+</section><section><h2 class="section-heading" id="affine-transformation">Affine transformation<a class="anchor" aria-label="anchor" href="#affine-transformation"></a></h2>
+<hr class="half-width"><p>An affine transformation is a type of transformation that preserves
 points, straight lines, and planes. It combines linear transformations
-(such as scaling, rotation, and shearing) with translation. Affine
-transformations preserve parallelism (i.e., if two lines are parallel
-before the transformation, they remain parallel afterward) but may not
-preserve angles or lengths. (Shearing is distorting the shape of objects
-by slanting them).</p>
+(such as scaling, rotation, and shearing) with translation.</p>
+<p>Affine transformations preserve parallelism (i.e., if two lines are
+parallel before the transformation, they remain parallel afterward) but
+may not preserve angles or lengths. (Shearing is distorting the shape of
+objects by slanting them).</p>
 <p>Affine transformations can be described using a matrix in homogeneous
 coordinates, allowing for both rotation, scaling, and translation to be
 performed in a unified way. An affine transformation matrix typically
 looks like this:</p>
 <p>A = [a11 a12 a13 tx] [a21 a22 a23 ty] [a31 a32 a33 tz] [0 0 0 1 ]</p>
-</div>
 <div class="section level3">
 <h3 id="where-the-upper-left-33-part-of-the-matrix-coefficients-𝑎ij-handles-rotation-scaling-and-shearing-">Where The upper-left 3×3 part of the matrix (coefficients 𝑎ij)
 handles rotation, scaling, and shearing.<a class="anchor" aria-label="anchor" href="#where-the-upper-left-33-part-of-the-matrix-coefficients-%F0%9D%91%8Eij-handles-rotation-scaling-and-shearing-"></a></h3>
@@ -540,10 +557,11 @@ used to transform any point in space by multiplying it by the vector
 <h3 id="conclusion">Conclusion:<a class="anchor" aria-label="anchor" href="#conclusion"></a></h3>
 <p>3D coordinate systems are based on X, Y, and Z axes, with
 right-handed and left-handed variants. Object transformations, include
-translation, rotation, and scaling. An affine transformation combines
-linear transformations and translations and can be represented using a
-4x4 matrix. Matrix multiplication allows us to efficiently apply
-multiple transformations in sequence.</p>
+translation, rotation, and scaling.</p>
+<p>An affine transformation combines linear transformations and
+translations and can be represented using a 4x4 matrix.</p>
+<p>Matrix multiplication allows us to efficiently apply multiple
+transformations in sequence.</p>
 </div>
 <div class="section level3">
 <h3 id="example-code">Example Code<a class="anchor" aria-label="anchor" href="#example-code"></a></h3>
