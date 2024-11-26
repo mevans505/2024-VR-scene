@@ -20,3 +20,31 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+Particle Sytems
+Particle systems are a technique sued to simulate complex physically based effects. They are created form a collection of images that together form a complex object that can be interacted with by the player or other NPCs. Examples of this include weather effects like falling snow or perhaps crumbling rocks falling off a cliff edge. Particle effects are manipulated through properties like their velocity, initial position and lifespan.
+
+Effects made with particle systems are commonly used in both video games and movies. Perhaps they might appear in autumn scenes, where leaves cover the ground, or maybe they would be used on torches to simulate fire in a dark, damp cave.
+
+In a 3D environment, particles will need to be spawned from something called an Emitter. The emitter will control the particles initial position and velocity, also determining when they will spawn and how many. Depending on which software a developer is using, there are many different types of emitters.
+
+Box Emitter
+
+A box emitter spawns particles at random positions within a box and sends them out of one of its six faces.
+
+Circle Emitter
+
+A circler emitter spawns particles at random positions within the circle in the direction of the emitter’s Y axis.
+
+Cone Emitter
+
+A cone emitter spawns particles at the tip of the cone and then sends them out at random angles out the other end.
+
+Sphere Emitter
+
+A Sphere emitter spawns particles at random positions within the sphere and sends them outwards from the center.
+
+Rigid bodies
+
+Unlike other particle systems, rigid bodies are a fixed shape that can have both translational and rotational motion. Rigid bodies are more often used to model solid objects like boxes, bridges or even a metal lever. Despite the model itself being unchangeable, force can still be applied onto it, allowing it to be moved or perhaps even thrown.
+
+
